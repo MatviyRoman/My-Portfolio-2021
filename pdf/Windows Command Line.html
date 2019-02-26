@@ -1,0 +1,67 @@
+Windows Command Line
+A-Z Windows Commands, Batch files, Dos and PowerShell
+Create file from command line
+by SRINI
+We can create files from command line in two ways. The first way is to use fsutil command and the other way is to use echo command. If you want to write any specific data in the file then use echo command. If you are not bothered about the data in the file but just want to create a file of some specific size then you can use fsutil command.
+
+To create file using echo
+echo some-text  > filename.txt
+Example:
+
+
+ 
+C:\>echo This is a sample text file > sample.txt
+C:\>type sample.txt
+This is a sample text file
+C:\>
+To create file using fsutil
+fsutil file createnew filename number_of_bytes
+Example:
+
+C:\data>fsutil file createnew sample2.txt 2000
+File C:\data\sample2.txt is created
+C:\data>dir
+01/23/2016  09:34 PM     2,000 sample2.txt
+C:\data>
+Limitations
+Fsutil can be used only by administrators. For non-admin users it throws up below error.
+
+c:\>fsutil file /?
+The FSUTIL utility requires that you have administrative privileges.
+c:\>
+
+
+New dir md test
+New file echo>text.txt
+		 rem/>text.txt
+		 title>text.txt
+		 nul>text.txt
+		 "">text.txt
+		 break>text.txt
+		 call>text.txt
+		 abc>text.txt
+		 f>text.txt
+
+Del file del text.txt
+
+Open file :
+
+type file.txt
+
+New file :
+
+Way 1 : type nul > file.txt
+Way 2 : echo This is a sample text file > sample.txt
+Way 3 : notepad myfile.txt <press enter>
+Edit content:
+
+notepad file.txt
+Copy
+
+copy file1.txt file1Copy.txt
+Rename
+
+rename file1.txt file1_rename.txt
+Delete file :
+
+del file.txt
