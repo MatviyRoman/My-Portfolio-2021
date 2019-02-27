@@ -370,22 +370,12 @@
                             </div>
                         </div>
                         <!-- Buttons Prev&Next Begin -->
-                        <style>
-                            .carousel-control-prev {
-                                font-size: 30px;
-                                font-weight: bold;
-                            }
-
-                            a.carousel-control-prev {
-                                left: -75%;
-                            }
-                        </style>
-                        <a style="font-size: 30px;font-weight: bold;left: -100px;color: #000;margin-right: 90%;width: 10%;text-transform: uppercase" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" @click="selectProject(index)">
+                        <a style="font-size: 30px;font-weight: bold;left: -100px;color: #000;margin-right: 90%;width: 10%;text-transform: uppercase" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span> -->
                             Prev
                         </a>
-                        <a style="font-size: 30px;font-weight: bold;left: 100px;color: #000;margin-left: 90%;width: 10%;text-transform: uppercase" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" @click="selectProject(index)">
+                        <a style="font-size: 30px;font-weight: bold;left: 100px;color: #000;margin-left: 90%;width: 10%;text-transform: uppercase" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                             <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span> -->
                             Next
@@ -400,7 +390,7 @@
                     <div class="infoProject">
                         <h3 class="section-title wow animated fadeInUp ml-3">Information about this project</h3>
                         <div class="row justify-content-around">
-                            <div class="col-lg-6 col-md-5 col-sm-8 p-md-2 p-sm-3 p-3 mt-5">
+                            <div class="col-lg-6 col-md-5 col-sm-8 p-xl-5 p-lg-5 p-md-0 p-sm-3 p-3 mt-5">
                                 <i class="screenshot">Full screenshot</i>
                                 <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
                             </div>
@@ -644,11 +634,6 @@
                     </nav>
                 </div>
             </div>
-            <div class="bgMap p-5">
-                <div class="row justify-content-center">
-                    <!-- <div id="map">My map will go here</div> -->
-                </div>
-            </div>
             <div class="container p-4">
                 <div class="row justify-content-center">
                     <div class="copyright mt-3 mb-3">
@@ -661,6 +646,13 @@
                             </a>
                         </p>
                     </div>
+                </div>
+            </div>
+            <div class="bgMap p-5">
+                <div class="row justify-content-center">
+                    <!-- <div id="map">My map will go here</div> -->
+                    <span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
+                    <div id="map"></div>
                 </div>
             </div>
         </footer>
@@ -680,35 +672,6 @@
     <script src="js/main.js"></script>
     <!-- Animated Headline -->
     <script src="js/animated-headline.js"></script>
-    <style>
-    /*<span class="metadata-marker" style="display: none;" data-region_tag="css"></span>*/
-
-    /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-    #map {
-        height: 50%;
-    }
-
-    /* Optional: Makes the sample page fill the window. */
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    </style>
-    <span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
-    <div id="map"></div>
-    <!-- <script>
-    var map;
-
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 8
-        });
-    }
-    </script> -->
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQdPRI_HuiS-ZACGMebWzGgXRN7FGpXVQ&callback=initMap" async defer></script>
     <!-- Moderniz -->
