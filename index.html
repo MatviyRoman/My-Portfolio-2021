@@ -361,7 +361,7 @@
                             <img src="img/desctop/head.png" alt="head" class="head d-block w-100" />
                             <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
                                 <div class="imgProjectCarousel">
-                                    <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
+                                    <img :src="'img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
                                 </div>
                                 <!-- <div class="carousel-caption d-none d-md-block">
                                     <h5>{{ project.name }}</h5>
@@ -402,7 +402,7 @@
                         <div class="row justify-content-around">
                             <div class="col-lg-6 col-md-5 col-sm-8 p-md-2 p-sm-3 p-3 mt-5">
                                 <i class="screenshot">Full screenshot</i>
-                                <img :src="'img/projects/' + project.url + '/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
+                                <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
                             </div>
                             <div class="description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
                                 <br><br>
@@ -422,7 +422,7 @@
                                 <h3 class="mt-3 ml-4">{{ project.skills }}</h3>
                                 <div class="w-100 mt-5"></div>
                                 <i class="screenshot">Small screenshot</i>
-                                <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid p-1" />
+                                <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid p-1" />
                                 <!-- <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid col-9 ml-5 mt-3 pt-1" />
                                 <div class="imgProject m-5">
                                     <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop img-fluid col-9 ml-5 mt-3 pt-1" />
