@@ -55,15 +55,30 @@ $(document).ready(function() {
 
 
 /* Google maps Begin */
-function myMap() {
+// function myMap() {
+//     var myLatLng = { lat: 49.8079356, lng: 24.0592995 };
+//     var mapCanvas = document.getElementById("map");
+//     var mapOptions = {
+//         center: new google.maps.LatLng(49.832689, 24.012236),
+//         zoom: 10
+//     };
+//     var map = new google.maps.Map(mapCanvas, mapOptions);
+//     var marker = new google.maps.Marker({
+//         position: myLatLng,
+//         map: map,
+//         title: 'Hello World! I live in Lviv. Ukraine ;)'
+//     });
+// }
+
+var map, marker;
+
+function initMap() {
     var myLatLng = { lat: 49.8079356, lng: 24.0592995 };
-    var mapCanvas = document.getElementById("map");
-    var mapOptions = {
-        center: new google.maps.LatLng(49.832689, 24.012236),
-        zoom: 10
-    };
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-    var marker = new google.maps.Marker({
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 49.832689, lng: 24.012236 },
+        zoom: 8
+    });
+    marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
         title: 'Hello World! I live in Lviv. Ukraine ;)'
@@ -1014,3 +1029,19 @@ $(document).ready(function() {
         event.preventDefault();
     });
 })*/
+
+// $(function(){
+//   $('.carousel-control-prev').click(function() {
+//     $('.active').trigger('click');
+//   })
+// })
+
+
+$(document).ready(function(){
+  $('.carousel-control-prev').click(function(){
+    $('.active').click();
+  });
+  // $('.carousel-control-prev').click(function(){
+  //   $('.active').trigger(select);
+  // });
+});
