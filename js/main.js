@@ -1,3 +1,5 @@
+console.log('Message: This site is under construction. Work is underway to correct errors and improve the functionality.');
+
 /* Fakes the loading setting a timeout Begin */
 $(document).ready(function() {
     setTimeout(function() {
@@ -1037,11 +1039,26 @@ $(document).ready(function() {
 // })
 
 
-$(document).ready(function(){
-  $('.carousel-control-prev').click(function(){
-    $('.active').click();
-  });
-  // $('.carousel-control-prev').click(function(){
-  //   $('.active').trigger(select);
-  // });
+
+
+
+// $( ".active" ).on( "click", function() {
+//   $('.active').click();
+// });
+// $( ".carousel-control-prev" ).trigger( "click" );
+
+
+// $(document).ready(function(){
+//     $( "li.active" ).on( "click", function() {
+//       alert( $( this ).text() );
+//       $( "li.active" ).after( $( "li.active" ) );
+//     });
+//     $( ".carousel-control-prev" ).trigger( "click" );
+// });
+
+$( ".carousel-control-prev" ).click(function() {
+33
+  $( "li.active" ).trigger( "click" );
+34
+console.log ('this')
 });
