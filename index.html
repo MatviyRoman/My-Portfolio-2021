@@ -374,7 +374,7 @@
                 <div class="row justify-content-center mt-5 mb-5">
                     <div id="carouselExampleIndicators" class="col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 carousel sliderProject1" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li v-for="(project, index) in projects" data-target="#carouselExampleIndicators" :data-slide-to="index" @click="selectProject(index)" :class="'project-' + index" :class="{'active': selectedProjectIndex === index}" :placeholder="project.name">
+                            <li v-for="(project, index) in projects" data-target="#carouselExampleIndicators" :data-slide-to="index" @click="selectProject(index)" :class="'project-' + index " :class="{'active': selectedProjectIndex === index}" :placeholder="project.name">
                             </li>
                         </ol>
                         <div class="carousel-inner">
@@ -385,17 +385,17 @@
                                 </div>
                                 <!-- <div class="carousel-caption d-none d-md-block">
                                     <h5>{{ project.name }}</h5>
-                                    <p>{{ project.url }}</p>
+                                    <p>{{ index + 1 }}</p>
                                 </div> -->
                             </div>
                         </div>
                         <!-- Buttons Prev&Next Begin -->
-                        <a style="font-size: 30px;font-weight: bold;left: -100px;color: #000;margin-right: 90%;width: 10%;text-transform: uppercase" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <a style="font-size: 30px;font-weight: bold;left: -100px;color: #000;margin-right: 90%;width: 10%;text-transform: uppercase" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" @click="selectProject(index-1)">
                             <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span> -->
                             Prev
                         </a>
-                        <a style="font-size: 30px;font-weight: bold;left: 100px;color: #000;margin-left: 90%;width: 10%;text-transform: uppercase" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <a style="font-size: 30px;font-weight: bold;left: 100px;color: #000;margin-left: 90%;width: 10%;text-transform: uppercase" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" @click="selectProject(index+1)">
                             <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span> -->
                             Next
@@ -415,8 +415,6 @@
                                 <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
                             </div>
                             <div class="description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
-                                <b>Project number:</b> {{ project.index }}
-                                <br><br>
                                 <b>Project completion date:</b> <time pubdate :datetime="project.date">{{ project.date }}</time>
                                 <br><br>
                                 <b>Project Name:</b> <a :href="'http://' + project.url" class="pl-3">
