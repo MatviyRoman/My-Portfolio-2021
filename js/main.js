@@ -57,21 +57,6 @@ $(document).ready(function() {
 
 
 /* Google maps Begin */
-// function myMap() {
-//     var myLatLng = { lat: 49.8079356, lng: 24.0592995 };
-//     var mapCanvas = document.getElementById("map");
-//     var mapOptions = {
-//         center: new google.maps.LatLng(49.832689, 24.012236),
-//         zoom: 10
-//     };
-//     var map = new google.maps.Map(mapCanvas, mapOptions);
-//     var marker = new google.maps.Marker({
-//         position: myLatLng,
-//         map: map,
-//         title: 'Hello World! I live in Lviv. Ukraine ;)'
-//     });
-// }
-
 var map, marker;
 
 function initMap() {
@@ -318,7 +303,7 @@ const cms = (name, num, img) => ({ name, num, img });
 
 const cmss = [
     cms(
-        'OcClass',
+        'OsClass',
         '75',
         'img/1.jpg'),
 
@@ -585,7 +570,7 @@ const projects = [
         'camel.matviy.pp.ua',
         'https://github.com/MatviyRoman/Camel',
         'Camel Heal',
-        `We have received your resume and are interested in speaking with you! Please find the attached inquiry form. Additionally, please complete the following test assignment: convert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”). We would appreciate it if you reviewed, completed, and returned these to us along with the estimated time that you spent on the test assignment. We look forward to speaking with you soon.`,
+        `Сonvert home page PSD into html (CamelCo PSD/Images - https://drive.google.com/open?id=1i5Jp0cIjb6K3CUJHrYLFFhk2upM4wQPZ; to access PSD, click file named“Camel HealGCoHome-November 7.psd” and then click “Download”).`,
         'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
         ''),
 
@@ -612,7 +597,7 @@ const projects = [
         'pantomax.matviy.pp.ua',
         'https://github.com/MatviyRoman/Pantomax',
         'Pantomax',
-        'Сделать верстку с макета и адаптировать ее под мобильные устройства. Ссылка прилагается на макет, адаптивную верстку необходимо сделать на свое усмотрение.',
+        'Сделать верстку с макета и адаптировать ее под мобильные устройства. Адаптивную верстку необходимо сделать на свое усмотрение.',
         'HTML5, CSS3, Bootstrap 4, jQuery, Responsive Design',
         ''),
 
@@ -621,7 +606,7 @@ const projects = [
         'todo-list.matviy.pp.ua',
         'https://github.com/MatviyRoman/todo-list',
         'todo-list',
-        `Техническое задание: Реализовать todo list (список дел). Функционал: вывод списка задач из базы данных, создание новой задачи, редактирование задачи, удаление задачи. Клиентская часть. Для всего использовать Angular Material Design. Основной компонент приложения - список задач. При открытии страницы должен показываться лоадер (задачи загружаются…). 1.1 Если задач в базе нет, вывести сообщение об этом и кнопку “создать первую задачу”. 1.2 Если есть задачи, список задач в виде таблицы (столбцы - id задачи, текст задачи, дата создания, действия с задачей). Кнопка добавления новой задачи над таблицей. При нажатии на кнопку добавления задачи открывается боковое окно (drawer) с заголовком (toolbar). 2.1 В боковом окне будет расположено текстовое поле + кнопка “добавить задачу”. 2.2 Кнопка должна быть неактивной, если поле пустое. 2.3 При добавлении задачи сначала должен показываться лоадер (подождите, идёт добавление), а затем окно должно закрываться. В случае ошибки должно появляться сообщение (в виде snackbar). 2.4 Добавить ошибку в случае, если введенный текст содержит символ “!”. Т.е. если пользователь ввёл текст “Выполнить испытательное задание!”, то при попытке создать задачу должен сначала показаться лоадер, а затем снова поле с кнопкой + в snackbar должно появиться сообщение с ошибкой. 2.5 После добавления задачи она также добавляется в таблицу на странице. При наведении на строку задачи в таблице, возле текста задачи появляется иконка редактирования (ручка). 3.1 При нажатии на кнопку редактирования открывается модальное окно (dialog) с текстовым полем и кнопками “Отмена” и “Сохранить”. 3.2 При нажатии на “Сохранить” сначала показывается лоадер (progress bar), затем окно закрывается и текст задачи в таблице меняется. В последней колонке (действия с задачей) должна быть кнопка-иконка корзины. 4.1 При нажатии открывается модальное окно (dialog) с подтверждением удаления. 4.2 При подтверждении удаления сначала показывается лоадер (progress bar), затем окно закрывается и задачи удаляется из списка проекта.`,
+        `Реализовать todo list (список дел). Функционал: вывод списка задач из базы данных, создание новой задачи, редактирование задачи, удаление задачи. Клиентская часть. Для всего использовать Angular Material Design. Основной компонент приложения - список задач. При открытии страницы должен показываться лоадер (задачи загружаются…). 1.1 Если задач в базе нет, вывести сообщение об этом и кнопку “создать первую задачу”. 1.2 Если есть задачи, список задач в виде таблицы (столбцы - id задачи, текст задачи, дата создания, действия с задачей). Кнопка добавления новой задачи над таблицей. При нажатии на кнопку добавления задачи открывается боковое окно (drawer) с заголовком (toolbar). 2.1 В боковом окне будет расположено текстовое поле + кнопка “добавить задачу”. 2.2 Кнопка должна быть неактивной, если поле пустое. 2.3 При добавлении задачи сначала должен показываться лоадер (подождите, идёт добавление), а затем окно должно закрываться. В случае ошибки должно появляться сообщение (в виде snackbar). 2.4 Добавить ошибку в случае, если введенный текст содержит символ “!”. Т.е. если пользователь ввёл текст “Выполнить испытательное задание!”, то при попытке создать задачу должен сначала показаться лоадер, а затем снова поле с кнопкой + в snackbar должно появиться сообщение с ошибкой. 2.5 После добавления задачи она также добавляется в таблицу на странице. При наведении на строку задачи в таблице, возле текста задачи появляется иконка редактирования (ручка). 3.1 При нажатии на кнопку редактирования открывается модальное окно (dialog) с текстовым полем и кнопками “Отмена” и “Сохранить”. 3.2 При нажатии на “Сохранить” сначала показывается лоадер (progress bar), затем окно закрывается и текст задачи в таблице меняется. В последней колонке (действия с задачей) должна быть кнопка-иконка корзины. 4.1 При нажатии открывается модальное окно (dialog) с подтверждением удаления. 4.2 При подтверждении удаления сначала показывается лоадер (progress bar), затем окно закрывается и задачи удаляется из списка проекта.`,
         'VueJS, HTML5, CSS3, Bootstrap 4, Responsive Design, Landing Page',
         ''),
 
@@ -747,7 +732,7 @@ const projects = [
         'arnika.matviy.pp.ua',
         'https://github.com/MatviyRoman/www.arnika.od.ua',
         'МЦ Арника arnika.od.ua',
-        'Було завдання з оригінального сайту зробити Responsive Design. Оригінал з того, що я робив можна глянути тут http://arnika.matviy.pp.ua/original/index.html',
+        'Зробити Responsive Design. Оригінал з того, що я робив можна глянути тут http://arnika.matviy.pp.ua/original/index.html',
         'HTML5, CSS3, Bootstrap 4, Responsive Design',
         ''),
 
@@ -777,12 +762,14 @@ new Vue({
     // template:
     // `<div :style="{width: '55%'}">t</div>`,
     data: {
+        isActive: false,
     	about: {
     		title: 'Front-end developer',
     		fullname: 'Roman Matviy',
     		location: 'Lviv, Ukraine',
     		nationality: 'Ukrainian',
     		email: 'roman@matviy.pp.ua',
+            site: 'matviy.pp.ua',
     		skype: 'romas6ka',
     		phone: '+380 93 88 00 822',
     		mobile: '+380 67 77 19 340',
@@ -820,11 +807,18 @@ new Vue({
         select: 1
     },
     methods: {
-        selectProject: function(index) {
-            console.log('Click', index)
-            this.project = projects[index]
-            this.selectedProjectIndex = index
+        modalOpen: function() {
+            this.isActive = true;
         },
+        modalClose: function() {
+            this.isActive = false;
+        },
+
+        // selectProject: function(index) {
+        //     console.log('Click', index)
+        //     this.project = projects[index]
+        //     this.selectedProjectIndex = index
+        // },
 
         //  select(project,index) {
         // 		this.project = project;
@@ -841,6 +835,10 @@ new Vue({
     computed: {
         material() {
             return this.materialsShow ? 'Hide materials' : 'Show materials'
+        },
+
+        message: function() {
+            return "Hello " + about.fullname;
         },
 
         phoneBtnText() {
@@ -880,27 +878,24 @@ new Vue({
 
 $(document).ready(function() {
     var mc = {
-        '0-19': 'bg-danger',
-        '20-39': 'bg-warning',
-        '40-59': 'bg-info',
-        '60-79': '',
-        '80-100': 'bg-success'
+        '0-19': 'bg-danger red',
+        '20-39': 'bg-warning orange',
+        '40-59': 'bg-info blue',
+        '60-79': 'green',
+        '80-100': 'bg-success green'
     };
 
     function between(x, min, max) {
         return x >= min && x <= max;
     }
 
-    var dc;
-    var first;
-    var second;
-    var th;
+    var bc, dc, first, second, th;
 
-    $('.progress-bar, .c100').each(function(index) {
+    $('.progress-bar, .c100, .circular-chart, .circle').each(function(index) {
 
         th = $(this);
-
         dc = parseInt($(this).attr('data-color'), 10);
+        bc = parseInt($(this).attr('circle-color'), 10);
 
 
         $.each(mc, function(name, value) {
@@ -913,47 +908,12 @@ $(document).ready(function() {
             if (between(dc, first, second)) {
                 th.addClass(value);
             }
-        });
-    });
-});
 
+            // console.log(between(bc, first, second));
 
-
-
-$(document).ready(function() {
-    var mc = {
-        '0-19': 'red',
-        '20-39': 'orange',
-        '40-59': 'blue',
-        '60-79': 'green',
-        '80-100': 'green'
-    };
-
-    function between(x, min, max) {
-        return x >= min && x <= max;
-    }
-
-    var dc;
-    var first;
-    var second;
-    var th;
-
-    $('.circular-chart, .circle').each(function(index) {
-
-        th = $(this);
-
-        dc = parseInt($(this).attr('circle-color'), 10);
-
-
-        $.each(mc, function(name, value) {
-
-            first = parseInt(name.split('-')[0], 10);
-            second = parseInt(name.split('-')[1], 10);
-
-            // console.log(between(dc, first, second));
-
-            if (between(dc, first, second)) {
+            if (between(bc, first, second)) {
                 th.addClass(value);
+                $('.circular-chart').removeClass(['bg-danger', 'bg-warning', 'bg-info', 'bg-success']);
             }
         });
     });
@@ -1056,9 +1016,16 @@ $(document).ready(function() {
 //     $( ".carousel-control-prev" ).trigger( "click" );
 // });
 
+// $( ".carousel-control-prev" ).click(function() {
+//   $( "li.active" ).trigger( "click" );
+// console.log ('this')
+// });
+
+$("li.activec").on("click", function(){
+    // $("li.active").click();
+    $("li.active").click();
+});
+
 $( ".carousel-control-prev" ).click(function() {
-33
-  $( "li.active" ).trigger( "click" );
-34
-console.log ('this')
+    $("li.active").trigger();
 });

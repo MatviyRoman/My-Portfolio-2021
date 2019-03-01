@@ -35,7 +35,7 @@
             #loader-wrapper .loader-section.section-right {
                 display: none;
             }
-      </style>
+        </style>
     </noscript>
     <!--  Noscript End  -->
     <title>Roman Matviy | A Front-end Developer's Portfolio</title>
@@ -55,17 +55,14 @@
         </div>
         <!-- Header Begin -->
         <header id="header">
-            <nav class="navbar navbar-expand-md navbar-light bg-light">
-                <!-- <div class="navbar-brand logo mt-3 ml-5">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <!-- <a class="navbar-brand logo" href="index.html">
                     <h2>RM</h2>
-                </div> -->
-                <a class="navbar-brand logo" href="index.html">
-                    <h2>RM</h2>
-                </a>
+                </a> -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" :href="'https://' + about.site">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#about"><b>About</b></a>
@@ -118,7 +115,7 @@
                 <div class="intro">
                     <div class="tt-text-intro">
                         <h1 class="tt-headline letters rotate-2">
-                            <span class="tt-words-wrapper">
+                            <span class="tt-words-wrapper" style="width: 100% !important;">
                                 <b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i class="in"><em>'</em></i><i class="in"><em>m</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>R</em></i><i class="in"><em>o</em></i><i class="in"><em>m</em></i><i class="in"><em>a</em><em>n</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>M</em></i><i class="in"><em>a</em></i><i class="in"><em>t</em><em>v</em><em>i</em><em>y</em></i></b>
                                 <b style="opacity: 1;"><i class="out"><em>I</em></i><i class="out"><em>'</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>F</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>U</em></i><i class="out"><em>k</em></i><i class="out"><em>r</em></i><i class="out"><em>a</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>e</em></i></b>
                             </span>
@@ -146,16 +143,37 @@
                 <h2 class="section-title wow animated pulse">About Me</h2>
                 <div class="abouts" v-for="(aboutMe, index) of abouts">
                     <div class="row">
-                        <div class="image-container col-md-6 col-12 mt-md-0 mt-4 wow bounceInRight align-self-center">
+                        <div class="image-container col-md-6 col-12 mt-md-0 mt-4 wow bounceInRight align-self-center" v-on:click="modalOpen">
                             <img src="img/me/blackMe.jpg" class="mt-3 mb-3 wow bounceInLeft d-block img-fluid Roman_Matviy" alt="Front-end developer Roman Matviy" />
                         </div>
+
+                        <!-- <button v-on:click="modalOpen">Launch modal</button> -->
+
+                        <div class="modal" v-bind:class="{'is-active':isActive}">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                                <div class="box">
+                                    <div class="content has-text-centered">
+                                        <p class="control">
+                                            <h3>{{message}}</h3>
+
+                                            hiiiii
+                                        </p>
+                                        <span>&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button @click="modalClose" class="modal-close"></button>
+                        </div>
+
                         <div class="col-md-6 col-12 p-5 align-self-center">
                             <div class="section-title wow animated fadeInUp mb-3">
                                 <h3>Hello World ;)</h3>
                             </div>
                             <div class="row align-content-center wow bounceInLeft">
                                 <div class="align-content-center">
-                                    <span>My name is </span><h2 class="ml-5">Roman Matviy</h2>
+                                    <span>My name is </span>
+                                    <h2 class="ml-5">Roman Matviy</h2>
                                     <br>
                                     <p>
                                         I'm a ukrainian (front-end) web developer living in Lviv city, Ukraine.
@@ -356,7 +374,7 @@
                 <div class="row justify-content-center mt-5 mb-5">
                     <div id="carouselExampleIndicators" class="col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 carousel sliderProject1" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li v-for="(project, index) of projects" data-target="#carouselExampleIndicators" :data-slide-to="index" @click="selectProject(index)" :class="'project-' + index" :class="{'active': selectedProjectIndex === index}" :placeholder="project.name">
+                            <li v-for="(project, index) in projects" data-target="#carouselExampleIndicators" :data-slide-to="index" @click="selectProject(index)" :class="'project-' + index" :class="{'active': selectedProjectIndex === index}" :placeholder="project.name">
                             </li>
                         </ol>
                         <div class="carousel-inner">
@@ -397,6 +415,7 @@
                                 <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
                             </div>
                             <div class="description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
+                                <b>Project number:</b> {{ project.index }}
                                 <br><br>
                                 <b>Project completion date:</b> <time pubdate :datetime="project.date">{{ project.date }}</time>
                                 <br><br>
@@ -579,14 +598,14 @@
                         </div>
                         <br>
                     </div>
-                    <nav class="navbar navbar-footer navbar-expand-md navbar-dark bg-dark col-12">
+                    <nav class="navbar navbar-footer navbar-expand-lg navbar-dark bg-dark col-12">
                         <!-- <a class="navbar-brand logo" href="index.html">
                             <h2>RM</h2>
                         </a> -->
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" :href="'https://' + about.site">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#about"><b>About</b></a>
@@ -653,7 +672,7 @@
             <!-- <div class="bgMap p-5">
                 <div class="row justify-content-center">
                     <div id="map">My map will go here</div> -->
-                    <!-- <span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
+            <!-- <span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
                     <div id="map"></div>
                 </div>
             </div> -->
