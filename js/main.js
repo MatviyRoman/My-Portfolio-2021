@@ -814,11 +814,11 @@ new Vue({
             this.isActive = false;
         },
 
-        // selectProject: function(index) {
-        //     console.log('Click', index)
-        //     this.project = projects[index]
-        //     this.selectedProjectIndex = index
-        // },
+        selectProject: function(index) {
+            // console.log('Click', index)
+            this.project = projects[index]
+            this.selectedProjectIndex = index
+        },
 
         //  select(project,index) {
         // 		this.project = project;
