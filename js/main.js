@@ -240,6 +240,11 @@ const frontEnds = [
         'img/1.jpg'),
 
     frontEnd(
+        'LESS',
+        '34',
+        'img/1.jpg'),
+
+    frontEnd(
         'JavaScript',
         '40',
         'img/1.jpg')
