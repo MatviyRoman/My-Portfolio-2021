@@ -4,20 +4,21 @@
     box-sizing: border-box
 }
 
-.btn,
-a {
+a,
+.btn {
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     text-decoration: none;
-    font-family: Robboto, serif
+    font-family: "Robboto", serif;
+    color: @clink
 }
 
 .btn {
     border: 0;
-    border-bottom: 2px solid rgba(10, 10, 10, .1);
+    border-bottom: 2px solid rgba(10, 10, 10, 0.1);
     border-radius: 2px
 }
 
@@ -33,7 +34,7 @@ a {
 }
 
 body {
-    font-family: Merriweather, serif;
+    font-family: "Merriweather", serif;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -49,7 +50,7 @@ section h3 {
 
 .section-title {
     font-size: 50px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 50px;
     position: relative;
     text-align: center
@@ -67,7 +68,7 @@ section h3 {
 }
 
 .top a {
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, 0.4);
     color: #fff;
     border-radius: 100%;
     border: 1px solid #fff;
@@ -100,7 +101,7 @@ header>section>.logo h2 {
     left: 60%;
     transform: translate(-50%, -50%);
     font-size: 35px;
-    font-weight: 700
+    font-weight: bold
 }
 
 header .cover-two {
@@ -112,6 +113,13 @@ header .cover-two {
     padding-bottom: 25%;
     position: relative;
     overflow-x: hidden
+}
+
+@media all and (max-width:725px) {
+    header .cover-two {
+        padding-top: 30%;
+        padding-bottom: 30%
+    }
 }
 
 header .clouds {
@@ -152,7 +160,7 @@ header .clouds {
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, .1) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
     position: absolute;
     z-index: 9;
     width: 100%
@@ -163,7 +171,7 @@ header .clouds {
 }
 
 .navbar .nav-link {
-    font-weight: 700
+    font-weight: bold
 }
 
 .navbar .sicon:hover {
@@ -200,12 +208,12 @@ header .clouds {
 
 .loaded #loader-wrapper .loader-section.section-left {
     transform: translateY(-100%);
-    transition: all .7s .3s cubic-bezier(.645, .045, .355, 1)
+    transition: all .7s .3s cubic-bezier(0.645, 0.045, 0.355, 1)
 }
 
 .loaded #loader-wrapper .loader-section.section-right {
     transform: translateY(100%);
-    transition: all .7s .3s cubic-bezier(.645, .045, .355, 1)
+    transition: all .7s .3s cubic-bezier(0.645, 0.045, 0.355, 1)
 }
 
 .loaded #loader-wrapper {
@@ -224,7 +232,7 @@ header .clouds {
 .about h2 {
     color: #fff;
     font-size: 35px;
-    font-weight: 700
+    font-weight: bold
 }
 
 .about a {
@@ -233,7 +241,7 @@ header .clouds {
 
 .about .btn-default {
     color: #fff;
-    background-color: rgba(102, 102, 102, .32)
+    background-color: rgba(102, 102, 102, 0.32)
 }
 
 .about .image-container {
@@ -297,7 +305,7 @@ header .clouds {
 
 .languages {
     color: #fff;
-    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
     background: #222;
     -webkit-background-size: contain;
     background-size: contain;
@@ -341,15 +349,15 @@ header .clouds {
 }
 
 .infoProject .description b {
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 10px
 }
 
 i.screenshot {
-    background-color: #000;
+    background-color: black;
     border-radius: 5px 5px 0 0;
-    color: #fff;
-    font-weight: 700;
+    color: white;
+    font-weight: bold;
     padding: 10px 10px 1px 10px;
     position: relative;
     left: 25px
@@ -367,7 +375,7 @@ i.screenshot {
 
 .all b,
 .first b {
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px
 }
 
@@ -493,8 +501,8 @@ i.screenshot {
 }
 
 .certificate {
-    background-color: rgba(255, 255, 255, .8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform .3s ease-out;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -502,7 +510,7 @@ i.screenshot {
 }
 
 .certificate:hover {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
     transition: transform .3s ease-out;
     z-index: 1
@@ -510,7 +518,7 @@ i.screenshot {
 
 .certificate img {
     border: 1px solid;
-    border-box: rgba(0, 0, 0, .5)
+    border-box: rgba(0, 0, 0, 0.5)
 }
 
 .materials {
@@ -519,7 +527,7 @@ i.screenshot {
 
 .material {
     background-image: linear-gradient(141deg, #9fb8ad 0, #1fc8db 51%, #2cb5e8 75%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     max-width: fit-content;
     padding: 1%;
     transition-property: linear-gradient, color, background-color;
@@ -528,7 +536,7 @@ i.screenshot {
 
 .material:hover {
     background-image: linear-gradient(141deg, #2cb5e8 0, #1fc8db 51%, #9fb8ad 75%);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     transform: scale(1.1);
     z-index: 1;
     -webkit-transition: all .5s ease-in-out;
@@ -614,12 +622,12 @@ i.screenshot {
 
 .form__input:focus+.form__label,
 .form__textarea:focus+.form__label {
-    background-color: #c33
+    background-color: #C33
 }
 
 .form__input:focus,
 .form__textarea:focus {
-    border: 1px solid #c33;
+    border: 1px solid #C33;
     outline: 0
 }
 
@@ -642,7 +650,7 @@ i.screenshot {
 
 .form__label svg {
     transform-origin: left top;
-    transform: scale(.75) translateX(-50%) translateY(-50%)
+    transform: scale(0.75) translateX(-50%) translateY(-50%)
 }
 
 .form__label svg,
@@ -673,11 +681,11 @@ svg {
 }
 
 .form__submit {
-    font-family: din-condensed-web, "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
-    font-weight: 400;
+    font-family: "din-condensed-web", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+    font-weight: normal;
     color: #fff;
     text-transform: uppercase;
-    border: none;
+    border: 0;
     outline: 0;
     background-color: #000;
     transition: background .5s;
@@ -686,7 +694,7 @@ svg {
 }
 
 .form__submit:hover {
-    background-color: #c33
+    background-color: #C33
 }
 
 button:focus {
@@ -694,29 +702,29 @@ button:focus {
     outline: 5px auto -webkit-focus-ring-color
 }
 
-input[type=email]:focus:invalid,
-input[type=email]:required:invalid {
-    background: url(http://www.markhillard.com/images/locked.png);
-    background-image: url(http://www.markhillard.com/fonts/lock-new.svg);
+input[type=email]:required:invalid,
+input[type=email]:focus:invalid {
+    background: url("http://www.markhillard.com/images/locked.png");
+    background-image: url("http://www.markhillard.com/fonts/lock-new.svg");
     background-position: right 8px center;
     background-repeat: no-repeat;
     background-size: 23px 23px;
     box-shadow: none
 }
 
-input[type=email]:focus:valid,
-input[type=email]:required:valid {
-    background: url(http://www.markhillard.com/images/unlocked.png);
-    background-image: url(http://www.markhillard.com/fonts/unlock-new.svg);
+input[type=email]:required:valid,
+input[type=email]:focus:valid {
+    background: url("http://www.markhillard.com/images/unlocked.png");
+    background-image: url("http://www.markhillard.com/fonts/unlock-new.svg");
     background-position: right 8px center;
     background-repeat: no-repeat;
     background-size: 23px 23px
 }
 
-.error,
 .invalid,
-.reset,
-.success {
+.success,
+.error,
+.reset {
     display: none;
     float: left;
     margin: 9px 0 0 13px;
@@ -724,18 +732,18 @@ input[type=email]:required:valid {
     top: 360px
 }
 
-.error,
-.invalid {
+.invalid,
+.error {
     color: #f5b2b6
 }
 
-.reset,
-.success {
+.success,
+.reset {
     color: #d7f5b2
 }
 
 .contact a {
-    color: #c33;
+    color: #C33;
     text-decoration: none
 }
 
@@ -752,10 +760,10 @@ footer {
     text-align: center;
     font-size: 13px;
     padding: 0 15px;
-    box-shadow: 0 0 21px rgba(0, 0, 0, .65);
-    -moz-box-shadow: 0 0 21px rgba(0, 0, 0, .65);
-    -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, .65);
-    background-color: #000;
+    box-shadow: 0 0 21px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0 0 21px rgba(0, 0, 0, 0.65);
+    -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.65);
+    background-color: black;
     background: url(../img/decorations/blackwood.jpg);
     -webkit-background-size: contain;
     background-size: contain
@@ -770,13 +778,13 @@ footer {
 #map {
     height: 400px;
     width: 100%;
-    background-color: #000;
-    box-shadow: 0 0 10px rgba(255, 255, 255, .5);
+    background-color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     transition: transform .3s ease-out
 }
 
 #map:hover {
-    box-shadow: 0 0 25px rgba(255, 255, 255, .5);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
     transform: scale(1.01);
     transition: transform .3s ease-out
 }
@@ -785,12 +793,12 @@ footer {
     display: flex;
     align-items: center;
     font-size: 18px;
-    font-family: Lato, arial, sans-serif;
+    font-family: "Lato", arial, sans-serif;
     font-weight: 400;
     background: #fff;
     color: #252525;
     border-radius: 40px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     -webkit-transition: all .4s ease-in;
     -moz-transition: all .4s ease-in;
     -ms-transition: all .4s ease-in;
@@ -799,7 +807,7 @@ footer {
 }
 
 .skill .btn:hover {
-    box-shadow: 1px 3px 10px rgba(0, 0, 0, .6);
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
     transform: translateY(-3px)
 }
 

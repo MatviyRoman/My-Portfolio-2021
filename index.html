@@ -326,11 +326,11 @@
         <div id="languages" class="languages pt-5 pb-5">
             <div class="container-fluid">
                 <h3 class="section-title wow animated fadeInUp mb-4">Languages</h3>
-                <div class="row">
-                    <div class="col ml-4 align-self-start">
+                <div class="row justify-content-around">
+                    <div class="col-lg-2 col-md-7 col-7 mt-lg-0 mt-md-4">
                         <img src="img/languages/bg2.png" alt="world languages" class="img-fluid world" />
                     </div>
-                    <div class="col single-chart language" v-for="(language, index) of languages">
+                    <div class="col-lg-2 col-md-6 col-6 single-chart language" v-for="(language, index) of languages">
                         <svg viewBox="0 0 36 36" class="circular-chart" :circle-color="language.num">
                             <path class="circle-bg" d="M18 2.0845
                                          a 15.9155 15.9155 0 0 1 0 31.831
