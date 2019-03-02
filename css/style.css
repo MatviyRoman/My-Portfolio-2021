@@ -13,6 +13,7 @@ a,
     transition: all 0.4s ease-in-out;
     text-decoration: none;
     font-family: "Robboto", serif;
+    color: @clink;
 }
 
 .btn {
