@@ -31,16 +31,6 @@ $(function() {
 });
 /* Year copyright End */
 
-// function send() {
-//     setTimeout(function() {
-//         window.open("mailto:roman@matviy.pp.ua" +
-//             "?cc=" + document.getElementById('email').value +
-//             "?subject=" + document.getElementById('subject').value +
-//             "&body=" + document.getElementById('message').value);
-//     }, 320);
-// }
-
-
 /* Send Mail Begin */
 $(document).ready(function() {
     $('form').submit(function(e) {
@@ -54,8 +44,6 @@ $(document).ready(function() {
 });
 /* Send Mail End */
 
-
-
 /* Google maps Begin */
 var map, marker;
 
@@ -68,7 +56,7 @@ function initMap() {
     marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        title: 'Hello World! I live in Lviv. Ukraine ;)'
+        title: 'Hello World! I`m Roman Matviy and i live in Lviv, Ukraine ;)'
     });
 }
 /* Google maps End */
@@ -318,7 +306,7 @@ const cmss = [
         'img/1.jpg'),
 
     cms(
-        'WordPress',
+        'WordPress + Elementor',
         '70',
         'img/1.jpg')
 ]
@@ -351,30 +339,61 @@ const frameworks = [
 /* Framework End */
 
 /* Language Begin */
-const language = (name, num, img) => ({ name, num, img });
+const language = ( name, num, level ) => ({ name, num, level });
 
 const languages = [
     language(
         'English',
         '40',
-        'img/1.jpg'),
+        'Pre-intermediate'),
 
     language(
         'Polish',
         '25',
-        'img/1.jpg'),
+        'Beginner'),
 
     language(
         'Ukrainian',
         '100',
-        'img/1.jpg'),
+        'Proficient'),
 
     language(
         'Russian',
         '80',
-        'img/1.jpg')
+        'Advanced')
 ]
 /* Language End */
+
+/* Contacts Begin */
+const contact = (icon, name, url) => ({ icon, name, url });
+
+const contacts = [
+    contact(
+        'fas fa-map-marker-alt',
+        'Lviv, Ukraine',
+        'https://www.google.com/maps/place/+79000/@49.8326046,23.8721529,11z/data=49.839683!4d24.029717'),
+
+    contact(
+        'fas fa-phone',
+        '+38 (093) 88 00 822',
+        'tel:+380 88 00 822'),
+
+    contact(
+        'far fa-envelope',
+        'roman@matviy.pp.ua',
+        'mailto:roman@matviy.pp.ua'),
+
+    contact(
+        'fab fa-viber',
+        '+38 (093) 88 00 822',
+        'viber:chat?number=+380938800822'),
+
+     contact(
+        'fab fa-skype',
+        'romas6ka',
+        'skype:live:romas6ka')
+]
+/* Contacts End */
 
 /* Links Begin */
 const link = (name, url) => ({ name, url });
@@ -390,9 +409,46 @@ const links = [
 
     link(
         'Tools & Programms',
-        'https://github.com/MatviyRoman/Tools-Programm')
+        'https://github.com/MatviyRoman/Tools-Programm'),
+ link(
+        'Additional Materials',
+        '#materials')
 ]
 /* Links End */
+
+/* Menus Begin */
+const menu = (name, url) => ({ name, url });
+
+const menus = [
+    menu(
+        'Home',
+        'https://matviy.pp.ua'),
+
+    menu(
+        'About me',
+        '#about'),
+
+    menu(
+        'Resume',
+        'pdf/Roman.Matviy.CV.pdf'),
+
+    menu(
+        'My Skills',
+        '#skillset'),
+
+    menu(
+        'My Projects',
+        '#projects'),
+
+    menu(
+        'My Certificates',
+        '#certificates'),
+
+    menu(
+        'My language',
+        '#languages'),
+]
+/* Menus End */
 
 /* Social Begin */
 const social = (name, icon, url) => ({ name, icon, url });
@@ -402,6 +458,11 @@ const socials = [
         'GitHub',
         'fab fa-github',
         'https://github.com/MatviyRoman'),
+
+    social(
+        'Linkendin',
+        'fab fa-linkedin',
+        'http://linkedin.com/in/MatviyRoman'),
 
     social(
         'Facebook',
@@ -536,7 +597,7 @@ const programs = [
     // 	'zip/wwwvuejs2.zip'),
 
     program(
-        'Sublime Text',
+        'Sublime Text 3',
         '80',
         'img/1.jpg'),
 
@@ -793,12 +854,14 @@ new Vue({
         abouts,
         backEnds,
         certificates,
+        contacts,
         cmss,
         frontEnds,
         frameworks,
         languages,
         links,
         materials,
+        menus,
         socials,
         skills,
         tools,
@@ -1026,7 +1089,7 @@ $(document).ready(function() {
 // console.log ('this')
 // });
 
-$("li.activec").on("click", function(){
+$("li.active").on("click", function(){
     // $("li.active").click();
     $("li.active").click();
 });
