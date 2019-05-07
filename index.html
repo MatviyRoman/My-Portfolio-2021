@@ -8,9 +8,10 @@
     <meta name="description" content="Roman Matviy, A Front-end Developer from Lviv, Ukraine">
     <meta name="keywords" content="content">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <!-- Circle -->
-    <link rel="stylesheet" type="text/css" href="css/circle.css">
+    <link rel="stylesheet" type="text/css" href="css/circle.min.css">
     <!-- Normalize -->
     <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
     <!-- Fontawesome CSS-->
@@ -20,23 +21,32 @@
     <!-- My Style CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Fonts Google -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <!-- Animate CSS / JS -->
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/animated-headline.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animated-headline.min.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo/favicon.png">
     <!--  Noscript Begin  -->
-    <noscript>
-        <style>
-            #loader-wrapper,
+    <script>
+        window.scrollBy({
+            top: 666,
+            behavior: 'smooth'
+        });
+    </script>
+    <!-- <noscript> -->
+    <style>
+        #loader-wrapper,
             #loader-wrapper .loader-section,
             #loader-wrapper .loader-section.section-left,
             #loader-wrapper .loader-section.section-right {
                 display: none;
             }
         </style>
-    </noscript>
+    <!-- </noscript> -->
     <!--  Noscript End  -->
     <title>Roman Matviy | A Front-end Developer's Portfolio</title>
 </head>
@@ -65,10 +75,10 @@
                             <a class="nav-link" :href="'https://' + about.site">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about"><b>About</b></a>
+                            <a class="nav-link" href="#about"><b>About Me</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><b>Resume</b></a>
+                            <a class="nav-link" href="pdf/Roman.Matviy.CV.pdf"><b>Resume</b></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#skillset">Skills</a>
@@ -105,25 +115,29 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form> -->
                 </div>
-                <a class="nav-link sicon mt-4" v-for="(social, index) of socials" :href="social.url"><i :class="social.icon"></i></a>
+                <a class="nav-link sicon" v-for="(social, index) of socials" :href="social.url"><i :class="social.icon"></i></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </nav>
             <section id="home" class="cover-two">
                 <div class="clouds"></div>
+                <div class="overlay"></div>
                 <div class="intro">
                     <div class="tt-text-intro">
                         <h1 class="tt-headline letters rotate-2">
-                            <span class="tt-words-wrapper" style="width: 100% !important;">
+                            <span class="tt-words-wrapper main-title" style="width: 100% !important;">
                                 <b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i class="in"><em>'</em></i><i class="in"><em>m</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>R</em></i><i class="in"><em>o</em></i><i class="in"><em>m</em></i><i class="in"><em>a</em><em>n</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>M</em></i><i class="in"><em>a</em></i><i class="in"><em>t</em><em>v</em><em>i</em><em>y</em></i></b>
                                 <b style="opacity: 1;"><i class="out"><em>I</em></i><i class="out"><em>'</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>F</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>U</em></i><i class="out"><em>k</em></i><i class="out"><em>r</em></i><i class="out"><em>a</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>e</em></i></b>
                             </span>
                         </h1>
                     </div>
-                    <span class="tt-sub-intro">Front-end developer</span>
+                    <h2 class="main-subtitle center tt-sub-intro">Front-end developer</h2><br>
                 </div>
             </section>
+            <a href="#about" class="arrow  bounce  p-5">
+                <i class="far fa-arrow-alt-circle-down"></i>
+            </a>
         </header>
         <!-- Header End -->
         <!-- <section class="social col-1">
@@ -140,15 +154,19 @@
         <!-- About Begin -->
         <section id="about" class="about pt-5 pb-4">
             <div class="container">
-                <h2 class="section-title wow animated pulse">About Me</h2>
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight">About me</h2>
+                    <h2 class="subtitle">About me</h2>
+                </div>
                 <div class="abouts" v-for="(aboutMe, index) of abouts">
                     <div class="row">
-                        <div class="image-container col-md-6 col-12 mt-md-0 mt-4 wow bounceInRight align-self-center" v-on:click="modalOpen">
+                        <div class="image-container col-md-5 col-12 mr-md-5 mr-0 mt-md-0 mt-4 wow bounceInRight align-self-center" v-on:click="modalOpen">
                             <img src="img/me/blackMe.jpg" class="mt-3 mb-3 wow bounceInLeft d-block img-fluid Roman_Matviy" alt="Front-end developer Roman Matviy" />
                         </div>
-
                         <!-- <button v-on:click="modalOpen">Launch modal</button> -->
-
                         <div class="modal" v-bind:class="{'is-active':isActive}">
                             <div class="modal-background"></div>
                             <div class="modal-content">
@@ -156,7 +174,6 @@
                                     <div class="content has-text-centered">
                                         <p class="control">
                                             <h3>{{message}}</h3>
-
                                             hiiiii
                                         </p>
                                         <span>&nbsp;</span>
@@ -165,18 +182,20 @@
                             </div>
                             <button @click="modalClose" class="modal-close"></button>
                         </div>
-
                         <div class="col-md-6 col-12 p-5 align-self-center">
-                            <div class="section-title wow animated fadeInUp mb-3">
-                                <h3>Hello World ;)</h3>
-                            </div>
-                            <div class="row align-content-center wow bounceInLeft">
-                                <div class="align-content-center">
-                                    <span>My name is </span>
-                                    <h2 class="ml-5">Roman Matviy</h2>
-                                    <br>
-                                    <p>
-                                        I'm a ukrainian (front-end) web developer living in Lviv city, Ukraine.
+                            <!-- <div>
+                                <h3 class="section-title wow animated fadeInUp mb-3">Hello World ;)</h3>
+                            </div> -->
+                            <div class="row align-content-center mb-5">
+                                <div class="text align-content-center">
+                                    <p class="text inline">
+                                        <span>Hello World ;)</span><br>
+                                        My name is
+                                        <h2 class="name inline">
+                                            &nbsp;<span class="wow animated bounceInRight">Roman</span>
+                                            &nbsp;<span class="wow animated bounceInLeft">Matviy</span>
+                                        </h2><br>
+                                        I'm a ukrainian <h3 class="profession inline">front-end web developer</h3> living in <strong>Lviv</strong> city, <strong>Ukraine</strong>.
                                         I have a passion for creating challenging, intuitive and beautiful products. I like to work on the client-side, designing interfaces with CSS and programming awesome experiences with JavaScript.
                                         I can write solid and well-organized code from scratch, and I have a passion for exploring new and emerging web technologies. I ensure that my projects are optimised, responsive, cross-browser compatible and accessible for users and search engines.
                                         Beside that, I like to create stuff with my hands.
@@ -186,17 +205,17 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="row justify-content-end">
+                            <!-- <div class="row justify-content-end">
                                 <div class="my-signature col-3 wow zoomIn m-3">
                                     <img src="img/me/sign-white.png" alt="sign" class="img-fluid" />
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="download-button wow tada">
-                                <a class="btn btn-primary btn-lg" href="pdf/Roman.Matviy.CV.pdf">
+                                <a class="btn btn-lg textBTN bg-transparent mr-3" href="pdf/Roman.Matviy.CV.pdf">
                                     <i class="fa fa-cloud-download"></i>
                                     Download CV
                                 </a>
-                                <a class="btn btn-default btn-lg" href="#contact">
+                                <a class="btn btn-lg textBTN transparent" href="#contact">
                                     <i class="fa fa-briefcase"></i>
                                     Hire Me
                                 </a>
@@ -210,7 +229,13 @@
         <!-- Skillset Begin -->
         <section id="skillset" class="skillset pt-5 pb-5">
             <div class="container">
-                <h2 class="section-title wow animated pulse mb-5">Skills</h2>
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight">My Skills</h2>
+                    <h2 class="subtitle">My Skills</h2>
+                </div>
                 <div class="row justify-content-around mb-3">
                     <!-- SkillFrontEnd Begin -->
                     <div id="skillFrontEnd" class="col-md-4 col-12">
@@ -218,7 +243,7 @@
                             <h3>Front-end</h3>
                         </div>
                         <div class="frontEnds" v-for="(frontEnd, index) of frontEnds">
-                            <strong class="m-2 pb-2">{{ frontEnd.name }}</strong>
+                            <strong class="text m-2 pb-2">{{ frontEnd.name }}</strong>
                             <div class="progress mb-3">
                                 <div class="progress-bar" role="progressbar" :style="{ width: frontEnd.num + '%' }" aria-valuenow="frontEnd.num" aria-valuemin="0" aria-valuemax="100" :data-color="frontEnd.num"><b class="number">{{ frontEnd.num }}</b> %</div>
                             </div>
@@ -231,7 +256,7 @@
                             <h3>Back-end</h3>
                         </div>
                         <div class="backEnds" v-for="(backEnd, index) of backEnds">
-                            <strong class="m-2">{{ backEnd.name }}</strong>
+                            <strong class="text m-2">{{ backEnd.name }}</strong>
                             <div class="progress mb-3">
                                 <div class="progress-bar" role="progressbar" :style="{ width: backEnd.num + '%' }" aria-valuenow="backEnd.num" aria-valuemin="0" aria-valuemax="100" :data-color="backEnd.num"><b>{{ backEnd.num }}</b> %</div>
                             </div>
@@ -244,7 +269,7 @@
                             <h3>Framework</h3>
                         </div>
                         <div class="cms" v-for="(framework, index) of frameworks">
-                            <strong class="m-2">{{ framework.name }}</strong>
+                            <strong class="text m-2">{{ framework.name }}</strong>
                             <div class="progress mb-3">
                                 <div class="progress-bar" role="progressbar" :style="{ width: framework.num + '%' }" aria-valuenow="framework.num" aria-valuemin="0" aria-valuemax="100" :data-color="framework.num"><b>{{ framework.num }}</b> %</div>
                             </div>
@@ -257,7 +282,7 @@
                             <h3>Skills</h3>
                         </div>
                         <div class="skills" v-for="(skill, index) of skills">
-                            <strong class="m-2">{{ skill.name }}</strong>
+                            <strong class="text m-2">{{ skill.name }}</strong>
                             <div class="progress mb-3">
                                 <div class="progress-bar" role="progressbar" :style="{ width: skill.num + '%' }" aria-valuenow="skill.num" aria-valuemin="0" aria-valuemax="100" :data-color="skill.num"><b>{{ skill.num }}</b> %</div>
                             </div>
@@ -270,7 +295,7 @@
                             <h3>Tools</h3>
                         </div>
                         <div class="tool" v-for="(tool, index) of tools">
-                            <strong class="m-2">{{ tool.name }}</strong>
+                            <strong class="text m-2">{{ tool.name }}</strong>
                             <div class="progress mb-3">
                                 <div class="progress-bar" role="progressbar" :style="{ width: tool.num + '%' }" aria-valuenow="tool.num" aria-valuemin="0" aria-valuemax="100" :data-color="tool.num"><b>{{ tool.num }}</b> %</div>
                             </div>
@@ -283,7 +308,7 @@
                             <h3>Programms</h3>
                         </div>
                         <div class="tool" v-for="(program, index) of programs">
-                            <strong class="m-2">{{ program.name }}</strong>
+                            <strong class="text m-2">{{ program.name }}</strong>
                             <div class="progress mb-3">
                                 <div class="progress-bar" role="progressbar" :style="{ width: program.num + '%' }" aria-valuenow="program.num" aria-valuemin="0" aria-valuemax="100" :data-color="program.num"><b>{{ program.num }}</b> %</div>
                             </div>
@@ -296,7 +321,7 @@
                             <h3>CMS</h3>
                         </div>
                         <div class="cms" v-for="(cms, index) of cmss">
-                            <strong class="m-2">{{ cms.name }}</strong>
+                            <strong class="text m-2">{{ cms.name }}</strong>
                             <div class="progress mb-3">
                                 <div class="progress-bar pbp" role="progressbar" :style="{ width: cms.num + '%' }" aria-valuenow="cms.num" aria-valuemin="0" aria-valuemax="100" :data-color="cms.num"><b>{{ cms.num }}</b> %</div>
                             </div>
@@ -324,8 +349,14 @@
         <!-- Skillset End -->
         <!-- Languages Begin -->
         <div id="languages" class="languages pt-5 pb-5">
-            <div class="container-fluid">
-                <h3 class="section-title wow animated fadeInUp mb-4">Languages</h3>
+            <div class="container">
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight">Languages</h2>
+                    <h2 class="subtitle">Languages</h2>
+                </div>
                 <div class="row justify-content-around">
                     <div class="col-lg-2 col-md-7 col-7 mt-lg-0 mt-md-4">
                         <img src="img/languages/bg2.png" alt="world languages" class="img-fluid world" />
@@ -340,6 +371,7 @@
                                          a 15.9155 15.9155 0 0 1 0 -31.831" />
                             <text x="18" y="20.35" class="percentage">{{ language.name }}</text>
                             <!-- <h3 class="align-content-end">{{ language.num }}%</h3> -->
+                            <h4>{{ language.level }}</h4>
                         </svg>
                     </div>
                 </div>
@@ -369,8 +401,14 @@
         <!-- Projects Old Version End -->
         <!-- Projects Begin -->
         <section id="projects" class="projects pt-5 pb-3 mb-5">
-            <div class="container-fluid">
-                <h3 class="section-title wow animated fadeInUp mb-4">Projects</h3>
+            <div class="container">
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">My Projects</h2>
+                    <h2 class="subtitle" style="color: #F8F8F8 !important;">My Projects</h2>
+                </div>
                 <div class="row justify-content-center mt-5 mb-5">
                     <div id="carouselExampleIndicators" class="col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 carousel sliderProject1" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -414,7 +452,7 @@
                                 <i class="screenshot">Full screenshot</i>
                                 <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
                             </div>
-                            <div class="description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
+                            <div class="text description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
                                 <b>Project completion date:</b> <time pubdate :datetime="project.date">{{ project.date }}</time>
                                 <br><br>
                                 <b>Project Name:</b> <a :href="'http://' + project.url" class="pl-3">
@@ -443,7 +481,8 @@
                     </div>
                     <!-- infoProject End -->
                 </div>
-                <div class="row justify-content-around">
+                <div class="text row justify-content-around">
+                    <button type="button" class="btn btn-info pt-3 pb-3 pl-5 pr-5">View all projects</button><br>
                     <div class="all ml-5">
                         <b>All projects: </b>{{ projects.length }}
                     </div>
@@ -457,9 +496,15 @@
         <!-- Certificates Begin -->
         <section id="certificates" class="certificates pt-5 pb-5">
             <div class="container">
-                <h2 class="section-title mb-5">Certificates</h2>
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">My Certificates</h2>
+                    <h2 class="subtitle" style="color: #F8F8F8 !important;">Certificates</h2>
+                </div>
                 <div class="row justify-content-around mb-3">
-                    <div class="certificate col-sm-5 col-11 mb-5 p-3" v-for="(certificate, index) of certificates">
+                    <div class="text certificate col-sm-5 col-11 mb-5 p-3" v-for="(certificate, index) of certificates">
                         <img :src="'certificate/thumbs/cert-' + certificate.license + '.jpg'" class="img-fluid mb-3" :alt="'Certificate ' + certificate.name" />
                         <br>
                         <b>Name:</b> <strong class="m-2 pb-2">{{ certificate.name }}</strong>
@@ -512,19 +557,27 @@
         <!-- Contact Begin -->
         <section id="contact" class="contact pt-5 pb-5">
             <div class="container">
-                <h2 class="section-title wow animated pulse mb-2">Contact Me</h2>
-                <div class="w-100"></div>
-                <div class="subtitle  mb-5">
-                    Currently available for contract or full-time work,
-                    <br class="hidden-xs-down">
-                    and would love to hear from you
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">Contact Me</h2>
+                    <h2 class="subtitle" style="color: #F8F8F8 !important;">Contact Me</h2>
                 </div>
-                <div class="row">
-                    <div class="contactInfo col-md-4 col-sm-5 col-xs-12 mb-5" v-for="(aboutMe, index) of abouts">
+                <div class="w-100"></div>
+                <div class="row justify-content-center">
+                    <div class="text mb-5">
+                        Currently available for contract or full-time work,
+                        <br class="hidden-xs-down">
+                        and would love to hear from you
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="text contactInfo col-md-5 col-sm-5 col-xs-12 mb-5" v-for="(aboutMe, index) of abouts">
                         <strong class="pb-2">{{ aboutMe.fullname }}</strong><br>
-                        <strong class="pb-2">{{ aboutMe.email }}</strong><br>
+                        <strong class="pb-2"><a :href="'mailto:' + aboutMe.email">{{ aboutMe.email }}</a></strong><br>
                         skype: <strong class="pb-2">{{ aboutMe.skype }}</strong><br>
-                        <strong class="pb-2">{{ aboutMe.phone }}</strong><br>
+                        <strong class="pb-2"><a :href="'tel:' + aboutMe.phone">{{ aboutMe.phone }}</a></strong><br>
                         <!-- <strong class="pb-2">{{ aboutMe.mobile }}</strong><br> -->
                         location: <strong class="pb-2">{{ aboutMe.location }}</strong><br>
                         nationality: <strong class="pb-2">{{ aboutMe.nationality }}</strong><br>
@@ -534,7 +587,7 @@
                         <span> / </span>
                         <strong class="pb-2"><a :href="'http://' + aboutMe.facebook">Facebook</a></strong>
                     </div>
-                    <div class="col-xs-12 col-sm-7 col-md-8">
+                    <div class="col-xs-12 col-sm-7 col-md-7">
                         <form id="contact-form" class="form" method="post" action="index.html">
                             <input type="text" name="foo" style="display: none;">
                             <div class="form__control">
@@ -573,8 +626,8 @@
                                 <div class="col-xs-7 col-md-9">
                                     <small class="form__error"></small>
                                 </div>
-                                <div class="col-xs-5 col-md-3">
-                                    <button class="form__submit pull-xs-right" id="sendEmail">Send email</button>
+                                <div class="col-xs-5 col-md-12">
+                                    <button class="form__submit btn pull-xs-right" id="sendEmail">Send email</button>
                                 </div>
                             </div>
                         </form>
@@ -584,79 +637,75 @@
         </section>
         <!-- Contact End -->
         <!--  Footer Begin  -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="links col-12 mt-3 mb-3" id="links">
-                        <h3 class="m-3">Links for developers</h3>
-                        <div class="link">
-                            <a v-for="(link, index) of links" :href="link.url">
-                                <strong style="color: #fff;" class="m-2">{{ link.name }}</strong>
-                            </a>
-                        </div>
-                        <br>
-                    </div>
-                    <nav class="navbar navbar-footer navbar-expand-lg navbar-dark bg-dark col-12">
-                        <!-- <a class="navbar-brand logo" href="index.html">
-                            <h2>RM</h2>
-                        </a> -->
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" :href="'https://' + about.site">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about"><b>About</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><b>Resume</b></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#skillset">Skills</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#projects">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#certificates">Certificates</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#contact">Contact</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        More
+        <footer class="footer pt-5">
+            <div class="container pt-5">
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <!-- <div class="section-title">
+                    <h2 class="title wow bounceInRight">Footer</h2>
+                    <h2 class="subtitle">Footer</h2>
+                </div> -->
+                <div class="row justify-content-around">
+                    <div id="menu" class="left col-12 col-md-4 pt-5 p-3 mb-5">
+                        <strong class="main-subtitle"><b class="heading-title">Portfolio</b><br>Menu</strong>
+                        <div class="menu">
+                            <ul>
+                                <li v-for="(menu, index) of menus">
+                                    <a :href="menu.url">
+                                        <strong style="color: #fff;" class="m-2">{{ menu.name }}</strong>
                                     </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#languages">My Languages</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#links">My Links</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#materials">Additional materials</a>
-                                    </div>
                                 </li>
                             </ul>
-                            <!-- <ul class="navbar-nav mr-auto">
-                                <li class="nav-item" v-for="(social, index) of socials">
-                                    <a class="nav-link mt-4" :href="social.url"><i :class="social.icon"></i></a>
-                                </li>
-                            </ul>
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form> -->
                         </div>
-                        <a class="nav-link sicon mt-4" v-for="(social, index) of socials" :href="social.url"><i :class="social.icon"></i></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </nav>
+                    </div>
+                    <div id="links" class="center col-12 col-md-4 pt-5 p-3 mb-5">
+                        <strong class="main-subtitle"><b class="heading-title">For developers</b><br>Links</strong>
+                        <div class="link">
+                            <ul>
+                                <li v-for="(link, index) of links">
+                                    <a :href="link.url">
+                                        <strong style="color: #fff;" class="m-2">{{ link.name }}</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="contacts" class="right col-12 col-md-4 pt-5 p-3 mb-5">
+                        <strong class="main-subtitle"><b class="heading-title">My Feedbacks</b><br>Contacts</strong>
+                        <div class="contacts">
+                            <ul>
+                                <li v-for="(contact, index) of contacts">
+                                    <i :class="contact.icon"></i>
+                                    <a :href="contact.url">
+                                        <strong style="color: #fff;" class="m-2">{{ contact.name }}</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="container p-4">
-                <div class="row justify-content-center">
-                    <div class="copyright mt-3 mb-3">
-                        <p class="row align-content-center">Copyright © 2018 - &nbsp;<span class="copyrightYear"></span>&nbsp;{{ about.fullname }}</p>
+            <div class="row justify-content-center">
+                <div id="map">My map will go here</div>
+            </div>
+            <div class="container-fluid mt-5 pt-5">
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight">On social media</h2>
+                    <h2 class="subtitle">social media</h2>
+                </div>
+                <div class="mt-3 pt-3 mb-5 pb-5">
+                    <a class="social-icon mr-3" v-for="(social, index) of socials" :href="social.url">
+                        <i :class="social.icon"></i>
+                    </a>
+                </div>
+                <!-- <div class="row justify-content-center"> -->
+                    <div class="w-100"></div>
+                    <div class="copyright pt-4 pb-4 mt-3">
+                        <p class="row align-content-center">Copyright © 2018 - &nbsp;<span class="copyrightYear"></span>&nbsp;<a :href="'https://' + about.site">{{ about.fullname }}</a></p>
                         <br>
                         <br>
                         <p>
@@ -665,24 +714,20 @@
                             </a>
                         </p>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
-            <!-- <div class="bgMap p-5">
-                <div class="row justify-content-center">
-                    <div id="map">My map will go here</div> -->
-            <!-- <span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
-                    <div id="map"></div>
-                </div>
-            </div> -->
         </footer>
         <!--  Footer End  -->
     </div>
     <!--  Roman Matviy End  -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
     <!-- VueJS -->
     <script src="js/vue.js"></script>
     <!-- WOW Animated -->
@@ -692,7 +737,7 @@
     <!-- Animated Headline -->
     <script src="js/animated-headline.js"></script>
     <!-- Google Map -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQdPRI_HuiS-ZACGMebWzGgXRN7FGpXVQ&callback=initMap" async defer></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQdPRI_HuiS-ZACGMebWzGgXRN7FGpXVQ&callback=initMap" async defer></script>
     <!-- Moderniz -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
 </body>
