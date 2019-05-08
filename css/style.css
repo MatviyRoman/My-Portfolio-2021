@@ -94,6 +94,16 @@ section h3 {
     font-size: 30px;
 }
 
+.author {
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 5px;
+    width: 100%;
+}
+
 .main-title {
     font-family: "Roboto", Sans-serif;
     font-size: 120px;
@@ -102,6 +112,7 @@ section h3 {
     text-transform: uppercase;
     line-height: 1em;
     letter-spacing: 5px;
+    width: 100%;
 }
 
 .main-subtitle {
@@ -245,7 +256,7 @@ header {
 header .arrow {
     display: block;
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
     left: 44%;
     /*transform: translate(-50%, -50%);*/
     text-decoration: none;
