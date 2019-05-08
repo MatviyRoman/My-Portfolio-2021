@@ -118,6 +118,7 @@ section h3 {
     left: 10%;
     text-align: left;
     position: relative;
+    z-index: 1;
 }
 
 .heading-title {
@@ -206,7 +207,8 @@ section h3 {
 
 .top {
     transition: all 10s ease-out;
-    z-index: 77777;
+    z-index: 1;
+    position: relative;
 }
 
 .top a {
@@ -234,6 +236,8 @@ section h3 {
 }
 
 header {
+    background: #1B2C3C;
+    color: #FEDD41;
     z-index: 3;
     position: relative;
 }
@@ -534,7 +538,6 @@ header .clouds {
     /*background: #222;*/
     /*color: #fbdb65;*/
     color: #5D7E9E;
-    position: relative;
     z-index: 1;
     /*height: 100vh;*/
 }
@@ -878,8 +881,6 @@ i.screenshot {
     border-style: dotted;*/
     padding-top: 25%;
     padding-bottom: 25%;
-    position: relative;
-    z-index: 9;
 }
 
 .certificate {
@@ -1187,11 +1188,9 @@ input[type=email]:focus:valid {
 .footer {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
-    position: relative;
     color: #999;
     text-align: center;
     font-size: 13px;
-    padding: 0 15px;
     box-shadow: 0 0 21px rgba(0, 0, 0, 0.65);
     -moz-box-shadow: 0 0 21px rgba(0, 0, 0, 0.65);
     -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.65);
@@ -1199,7 +1198,11 @@ input[type=email]:focus:valid {
     /*background: url(../img/decorations/blackwood.jpg);*/
     -webkit-background-size: contain;
     background-size: contain;
-    z-index: 1;
+}
+
+
+.footer a:hover {
+    collor: #fff !important;
 }
 
 .footer .left,
@@ -1255,46 +1258,50 @@ input[type=email]:focus:valid {
     border-radius: 50%;
     font-size: 35px;
     margin-right: 10px;
-    padding: 20px 23px;
+    padding: 20px 25px;
     width: 80px;
     height: 80px;
     opacity: .6;
-}
-
-.footer .nth-child(3) {
-    display: none;
 }
 
 .footer .social-icon:hover {
     opacity: 1;
 }
 
-.footer a:hover {
-    collor: #fff !important;
-}
+/*.footer .nth-child(3) {
+    display: none;
+}*/
 
 .footer .copyright {
     background: #313A42;
+    color: #999;
+    font-weight: 300;
     text-align: center;
+    text-transform: lowercase;
     width: 100%;
 }
 
-.navbar-footer {
-    /*background-color: rgba(255, 255, 255, 0.3) !important;*/
-    position: relative;
-    z-index: 9;
-    width: 100%;
+.footer .copyright .link {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: .7;
 }
 
-#map {
+.footer .copyright .link:hover {
+    opacity: 1;
+}
+
+.footer #map {
     height: 200px;
-    width: 97%;
+    width: 98%;
     background-color: #000;
     /*box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);*/
     transition: transform 0.3s ease-out;
 }
 
-/*#map:hover {
+/*.footer #map:hover {
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
     transform: scale(1.01);
     transition: transform 0.3s ease-out;
@@ -1354,11 +1361,6 @@ background-color:blue;
 
 .progress {
     color: #000;
-}
-
-header {
-    background: #1B2C3C;
-    color: #FEDD41;
 }
 
 @media all and (max-width: 991px) {
