@@ -56,6 +56,17 @@
     <div id="loader-wrapper">
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
+        <div class="intro" style="z-index: 11;">
+            <div class="tt-text-intro">
+                <h1 class="tt-headline letters rotate-2">
+                    <span class="tt-words-wrapper author" style1="width: 100% !important;">
+                        <b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i class="in"><em>'</em></i><i class="in"><em>m</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>R</em></i><i class="in"><em>o</em></i><i class="in"><em>m</em></i><i class="in"><em>a</em><em>n</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>M</em></i><i class="in"><em>a</em></i><i class="in"><em>t</em><em>v</em><em>i</em><em>y</em></i></b>
+                        <b style="opacity: 1;"><i class="out"><em>I</em></i><i class="out"><em>'</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>F</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>U</em></i><i class="out"><em>k</em></i><i class="out"><em>r</em></i><i class="out"><em>a</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>e</em></i></b>
+                    </span>
+                </h1>
+            </div>
+            <h2 class="main-subtitle center tt-sub-intro">Front-end developer</h2><br>
+        </div>
     </div>
     <!--  loader-wrapper End  -->
     <!--  Roman Matviy Begin  -->
@@ -195,8 +206,6 @@
                                         I can write solid and well-organized code from scratch, and I have a passion for exploring new and emerging web technologies. I ensure that my projects are optimised, responsive, cross-browser compatible and accessible for users and search engines.
                                         Beside that, I like to create stuff with my hands.
                                         <br>
-                                        <!-- <br>
-                                        <br> -->
                                         I want to be involved in projects that I can be proud of, join an amazing team and advance my development career. Take some time to look at my projects, credentials and if you're interested in helping me make this happen, <a href="#contact">let's get in touch.</a>
                                     </p>
                                 </div>
@@ -381,7 +390,7 @@
                     <h4 class="heading-title">"The Lights" Cast</h4>
                 </div> -->
                 <div class="section-title">
-                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">My Projects</h2>
+                    <h2 class="title wow bounceInRight" style="color: #242937 !important;">My Projects</h2>
                     <h2 class="subtitle" style="color: #F8F8F8 !important;">Projects</h2>
                 </div>
                 <div class="row justify-content-center mt-5 mb-5">
@@ -490,22 +499,38 @@
                     <h4 class="heading-title">"The Lights" Cast</h4>
                 </div> -->
                 <div class="section-title">
-                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">All Projects</h2>
+                    <h2 class="title wow bounceInRight" style="color: #242937 !important;">All Projects</h2>
                     <h2 class="subtitle" style="color: #F8F8F8 !important;">Projects</h2>
                 </div>
                 <div class="row justify-content-center mt-5 mb-5">
-                    <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4" v-for="(project, index) of projects" class="list-group-item list-group-item-action pointer">
-                        <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
-                        <h2>{{ project.name }}</h2>
-                        <div class="url">
-                            <a :href="'http://' + project.url">{{ project.url }}</a>
-                            <br>
-                            <a :href="project.github">Source</a>
+                    <!-- <a v-for="(project, index) of projects" :href="'http://' + project.url">
+                        <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4" v-for="(project, index) of projects" class="list-group-item list-group-item-action pointer">
+                            <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
+                            <h2>{{ project.name }}</h2>
+                            <div class="url">
+                                <a :href="'http://' + project.url">{{ project.url }}</a>
+                                <br>
+                                <a :href="project.github">Source</a>
+                            </div>
+                            <!-- <div class="description">{{ project.desc }}</div> -->
+                    <!-- <div class="date">{{ project.date }}</div>
+                            <div class="project-skills">{{ project.skills }}</div>
                         </div>
-                        <!-- <div class="description">{{ project.desc }}</div> -->
-                        <div class="date">{{ project.date }}</div>
-                        <div class="project-skills">{{ project.skills }}</div>
-                    </div>
+                    </a> -->
+                    <a style="display: inline-block;" v-for="(project, index) of projects" :href="'http://' + project.url">
+                        <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4" class="list-group-item list-group-item-action pointer">
+                            <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
+                            <h2>{{ project.name }}</h2>
+                            <div class="url">
+                                <a :href="'http://' + project.url">{{ project.url }}</a>
+                                <br>
+                                <a :href="project.github">Source</a>
+                            </div>
+                            <!-- <div class="description">{{ project.desc }}</div> -->
+                            <div class="date">{{ project.date }}</div>
+                            <div class="project-skills">{{ project.skills }}</div>
+                        </div>
+                    </a>
                 </div>
                 <div class="text row justify-content-around" style="color: #000">
                     <a class="btn btn-lg textBTN transparent" href="#top" v-on:click="show = !show">
@@ -531,11 +556,12 @@
                     <h4 class="heading-title">"The Lights" Cast</h4>
                 </div> -->
                 <div class="section-title">
-                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">My Certificates</h2>
+                    <h2 class="title wow bounceInRight" style="color: #242937 !important;">My Certificates</h2>
                     <h2 class="subtitle" style="color: #F8F8F8 !important;">Certificates</h2>
                 </div>
                 <div class="row justify-content-around mb-3">
-                    <div class="text certificate col-sm-5 col-11 mb-5 p-3" v-for="(certificate, index) of certificates">
+                    <div v-for="(certificate, index) of certificates" :href="'certificate/PDF/cert-' + certificate.license + '.pdf'" class="text certificate col-sm-5 col-11 mb-5 p-3">
+                        <!-- <a :href="'certificate/PDF/cert-' + certificate.license + '.pdf'"> -->
                         <img :src="'certificate/thumbs/cert-' + certificate.license + '.jpg'" class="img-fluid mb-3" :alt="'Certificate ' + certificate.name" />
                         <br>
                         <b>Name:</b> <strong class="m-2 pb-2">{{ certificate.name }}</strong>
@@ -547,6 +573,7 @@
                         <b>Link:</b> <strong class="m-2 pb-2"><a :href="certificate.link">{{ certificate.link }}</a></strong>
                         <br>
                         <b>Download:</b> <a :href="'certificate/PDF/cert-' + certificate.license + '.pdf'">PDF</a> | <a :href="'certificate/cert-' + certificate.license + '.png'">IMG</a>
+                        <!-- </a> -->
                     </div>
                 </div>
                 <div class="row justify-content-around">
@@ -592,7 +619,7 @@
                     <h4 class="heading-title">"The Lights" Cast</h4>
                 </div> -->
                 <div class="section-title">
-                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">My Contact</h2>
+                    <h2 class="title wow bounceInRight" style="color: #242937 !important;">My Contact</h2>
                     <h2 class="subtitle" style="color: #F8F8F8 !important;">Contact</h2>
                 </div>
                 <div class="w-100"></div>
@@ -658,7 +685,7 @@
                                     <small class="form__error"></small>
                                 </div>
                                 <div class="col-xs-5 col-md-12">
-                                    <button class="form__submit btn pull-xs-right" id="sendEmail">Send email</button>
+                                    <button class="form__submit btn text pull-xs-right" id="sendEmail">Send email</button>
                                 </div>
                             </div>
                         </form>
@@ -770,7 +797,7 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQdPRI_HuiS-ZACGMebWzGgXRN7FGpXVQ&callback=initMap" async defer></script>
     <!-- Moderniz -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </body>
 
 </html>
