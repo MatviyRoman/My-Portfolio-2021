@@ -829,6 +829,7 @@ new Vue({
     // `<div :style="{width: '55%'}">t</div>`,
     data: {
         isActive: false,
+        show: true,
     	about: {
     		title: 'Front-end developer',
     		fullname: 'Roman Matviy',
