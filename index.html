@@ -37,7 +37,7 @@
             behavior: 'smooth'
         });
     </script> -->
-    <noscript>
+    <!-- <noscript> -->
         <style>
             #loader-wrapper,
             #loader-wrapper .loader-section,
@@ -46,7 +46,7 @@
                 display: none;
             }
         </style>
-    </noscript>
+   <!--  </noscript> -->
     <!--  Noscript End  -->
     <title>Roman Matviy | A Front-end Developer's Portfolio</title>
 </head>
@@ -144,12 +144,31 @@
                         </h1>
                     </div>
                     <h2 class="main-subtitle center tt-sub-intro">Front-end developer</h2><br>
+                    <a v-if="show" v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent" href="#allProjects">
+                        <span style="color: #fff;">
+                            <!-- <i class="fas fa-briefcase"></i> -->
+                            <!-- <i class="fab fa-buromobelexperte"></i> -->
+                            <i class="fas fa-flask"></i>
+                            <!-- <i class="fas fa-vial"></i> -->
+                            WORK EXPERIENCE
+                        </span>
+                    </a>
+                    <a v-if="!show" v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent" href="mailto:roman@matviy.pp.ua">
+                        <span style="color: #fff;">
+                            <!-- <i class="fas fa-briefcase"></i> -->
+                            <!-- <i class="fab fa-buromobelexperte"></i> -->
+                            <!-- <i class="far fa-address-card"></i> -->
+                            <!-- <i class="fas fa-vial"></i> -->
+                            <i class="fa fa-briefcase"></i>
+                            Hire Me
+                        </span>
+                    </a>
                 </div>
             </section>
-            <a href="#about" class="arrow bounce  p-5" v-if="show">
+            <a v-if="show" href="#about" class="arrow bounce  p-5">
                 <i class="far fa-arrow-alt-circle-down"></i>
             </a>
-            <a href="#allProjects" class="arrow bounce  p-5" v-if="!show">
+            <a v-if="!show" href="#allProjects" class="arrow bounce  p-5">
                 <i class="far fa-arrow-alt-circle-down"></i>
             </a>
         </header>
@@ -217,7 +236,8 @@
                             </div> -->
                             <div class="download-button wow tada">
                                 <a class="btn btn-lg textBTN bg-transparent mr-3" href="pdf/Roman.Matviy.CV.pdf">
-                                    <i class="fa fa-cloud-download"></i>
+                                    <!-- <i class="fa fa-cloud-download"></i> -->
+                                    <i class="fas fa-file-download"></i>
                                     Download CV
                                 </a>
                                 <a class="btn btn-lg textBTN transparent" href="#contact">
@@ -334,21 +354,6 @@
                     </div>
                     <!-- SkillCMS End -->
                 </div>
-                <!-- <div class="languages">
-                    <h3 class="section-title wow animated fadeInUp">Languages</h3>
-                    <div class="row justify-content-center mb-3">
-                        <div class="language col-lg-2 col-md-12 col-sm-11 col-12" v-for="(language, index) of languages">
-                            <div :class="'c100 p' + language.num + ' dark'" :data-color="language.num">
-                                <span style="color: #fff">{{ language.num }}%</span>
-                                <div class="slice">
-                                    <div class="bar"></div>
-                                    <div class="fill"></div>
-                                </div>
-                            </div>
-                            <strong class="m-2">{{ language.name }}</strong>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
         <!-- Skillset End -->
@@ -382,6 +387,20 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="languages">
+            <div class="row justify-content-center mb-3">
+                <div class="language col-lg-2 col-md-12 col-sm-11 col-12" v-for="(language, index) of languages">
+                    <div :class="'c100 p' + language.num + ' dark'" :data-color="language.num">
+                        <span style="color: #fff">{{ language.num }}%</span>
+                        <div class="slice">
+                            <div class="bar"></div>
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <strong class="m-2">{{ language.name }}</strong>
+                </div>
+            </div>
+        </div> -->
         <!-- Languages End -->
         <!-- Projects Begin -->
         <section v-if="show" id="projects" class="projects pt-5 pb-3 mb-5">
@@ -433,7 +452,7 @@
                         <h3 class="section-title wow animated fadeInUp ml-3">Information about this project</h3>
                         <div class="row justify-content-around">
                             <div class="col-lg-6 col-md-5 col-sm-8 p-xl-5 p-lg-5 p-md-0 p-sm-3 p-3 mt-5">
-                                <i class="screenshot">Full screenshot</i>
+                                <i class="heading-title screenshot">Full screenshot</i>
                                 <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
                             </div>
                             <div class="text description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
@@ -452,7 +471,7 @@
                                 <b>The use of technology:</b>
                                 <h3 class="mt-3 ml-4">{{ project.skills }}</h3>
                                 <div class="w-100 mt-5"></div>
-                                <i class="screenshot">Small screenshot</i>
+                                <i class="heading-title screenshot">Small screenshot</i>
                                 <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid p-1" />
                                 <!-- <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid col-9 ml-5 mt-3 pt-1" />
                                 <div class="imgProject m-5">
@@ -481,7 +500,6 @@
                             View all projects
                         </span>
                     </a>
-                    <!-- <button type="button" class="btn btn-info pt-3 pb-3 pl-5 pr-5" formaction="/index.html#allProjects" v-on:click="show = !show">View all projects</button><br> -->
                     <div class="all ml-5">
                         <b>All projects: </b>{{ projects.length }}
                     </div>
@@ -517,8 +535,8 @@
                             <div class="project-skills">{{ project.skills }}</div>
                         </div>
                     </a> -->
-                    <a style="display: inline-block;" v-for="(project, index) of projects" :href="'http://' + project.url">
-                        <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4" class="list-group-item list-group-item-action pointer">
+                    <div class="cart1 project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 m-2  list-group-item list-group-item-action" v-for="(project, index) of projects">
+                        <a :href="'http://' + project.url">
                             <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
                             <h2>{{ project.name }}</h2>
                             <div class="url">
@@ -529,14 +547,24 @@
                             <!-- <div class="description">{{ project.desc }}</div> -->
                             <div class="date">{{ project.date }}</div>
                             <div class="project-skills">{{ project.skills }}</div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
                 <div class="text row justify-content-around" style="color: #000">
-                    <a class="btn btn-lg textBTN transparent" href="#top" v-on:click="show = !show">
-                        <span style="color: #fff;">
-                            <i class="fas fa-home"></i>
+                    <a v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent2" href="#top">
+                        <span style="color: #745B86;">
+                            <i class="fas fa-home" style="color: #745B86;"></i>
                             Go to home
+                        </span>
+                    </a>
+                    <a v-on:click="show = !show" class="btn btn-lg textBTN transparent" href="mailto:roman@matviy.pp.ua">
+                        <span style="color: #fff;">
+                            <!-- <i class="fas fa-briefcase"></i> -->
+                            <!-- <i class="fab fa-buromobelexperte"></i> -->
+                            <!-- <i class="far fa-address-card"></i> -->
+                            <!-- <i class="fas fa-vial"></i> -->
+                            <i class="fa fa-briefcase"></i>
+                            Hire Me
                         </span>
                     </a>
                     <div class="all ml-5">
@@ -685,7 +713,7 @@
                                     <small class="form__error"></small>
                                 </div>
                                 <div class="col-xs-5 col-md-12">
-                                    <button class="form__submit btn text pull-xs-right" id="sendEmail">Send email</button>
+                                    <button class="form__submit btn text pull-xs-right" id="sendEmail"><i class="far fa-paper-plane"></i>Send email</button>
                                 </div>
                             </div>
                         </form>
@@ -795,7 +823,7 @@
     <!-- Animated Headline -->
     <script src="js/animated-headline.js"></script>
     <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQdPRI_HuiS-ZACGMebWzGgXRN7FGpXVQ&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQdPRI_HuiS-ZACGMebWzGgXRN7FGpXVQ&callback=initMap"></script>
     <!-- Moderniz -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </body>
