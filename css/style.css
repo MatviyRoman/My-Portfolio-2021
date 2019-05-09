@@ -35,9 +35,14 @@ a:hover,
     background: #17A2B8;
 }
 
+.btn i {
+    margin-right: 15px;
+}
+
 .bg-transparent {
     border: 2px solid #745B86;
     color: #1A242D;
+    font-weight: 400 !important;
 }
 
 .bg-transparent:hover {
@@ -45,8 +50,22 @@ a:hover,
     color: #fff;
 }
 
+.bg-transparent2 {
+    background: #fff;
+    border: 2px solid #745B86;
+    color: #1A242D;
+    font-weight: 400 !important;
+}
+
+.bg-transparent2:hover {
+    background: #fff;
+    border: 2px solid #17A2B8;
+    color: #17A2B8 !important;
+}
+
 .transparent {
     color: #1A242D !important;
+    font-weight: 800 !important;
 }
 
 /*.transparent:hover {
@@ -128,8 +147,8 @@ section h3 {
 
 .section-title {
     left: 10%;
-    text-align: left;
     position: relative;
+    text-align: left;
 }
 
 .heading-title {
@@ -218,8 +237,8 @@ section h3 {
 
 .top {
     transition: all 10s ease-out;
-    z-index: 1;
     position: relative;
+    z-index: 1;
 }
 
 .top a {
@@ -254,11 +273,11 @@ header {
 }
 
 header .arrow {
-    display: block;
+    /*display: block;*/
     position: absolute;
-    bottom: 0;
-    left: 44%;
-    /*transform: translate(-50%, -50%);*/
+    bottom: -3%;
+    left: 45.5%;
+    transform: translate(-50%, -100%);
     text-decoration: none;
     z-index: 4;
 }
@@ -639,6 +658,28 @@ header .clouds {
     background-color: #ffffff12;
 }
 
+/* Cart Begin */
+.cart {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-out;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cart:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transform: scale(1.01);
+    transition: transform 0.3s ease-out;
+    z-index: 10;
+}
+
+.cart img {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+/* Cart End */
+
 /* Language Begin */
 .languages {
     color: #fff;
@@ -648,111 +689,7 @@ header .clouds {
     background-size: contain;
     background-position: 50 0;
     background-repeat: no-repeat;
-    z-index: -1;
 }
-/* Language End */
-
-/* Projects Begin */
-.projects {
-    /*background: #212040;*/
-    background: #fff;
-    /*color: #fff;*/
-    color: #222;
-}
-
-.projects h3 {
-    color: #222;
-}
-
-.projects .head {
-    height: 110%;
-    position: absolute;
-    z-index: 8;
-}
-
-.projects .foot {
-    height: 50%;
-}
-
-.projects .carousel-indicators li {
-    border: 1px solid #000;
-}
-
-.projects .imgProjectCarousel {
-    /*background-position: center;*/
-    -webkit-background-size: cover;
-    background-size: cover;
-    background: url(../img/projects/no-screenshot.png) no-repeat;
-    margin-left: 4%;
-    z-index: 4;
-}
-
-.projects .imgProjectCarousel img {
-    /*width: 100%;
-  height: 105%;*/
-}
-
-.infoProject {
-    position: relative;
-}
-
-.infoProject .description b {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-i.screenshot {
-    background-color: black;
-    border-radius: 5px 5px 0 0;
-    color: white;
-    font-weight: bold;
-    padding: 10px 10px 1px 10px;
-    position: relative;
-    left: 25px;
-}
-
-.infoProject .full-screenshot,
-.infoProject .small-screenshot {
-    background: #2b2b2b;
-    /*width: 95%;*/
-    margin: 0 auto;
-}
-
-.infoProject .frame {
-    position: absolute;
-}
-
-.all b,
-.first b {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.imgProject {
-    position: relative;
-}
-
-.imgProject .desctop {
-    width: 73%;
-}
-
-.imgProject .frame {
-    position: absolute;
-    top: 1%;
-    left: -2%;
-    height: 111%;
-}
-/* Projects End */
-
-/* Heart beat Begin */
-/*.heart {
-    font-size: 150px;
-    height: 200px;
-    width: 200px;
-    color: #e00;
-    animation: beat .7s infinite alternate;
-    transform-origin: center;
-}*/
 
 .world {
     -webkit-animation: rotation 50s infinite linear;
@@ -797,6 +734,107 @@ i.screenshot {
         transform: scale(1.2);
     }
 }
+/* Language End */
+
+/* Projects Begin */
+.projects {
+    /*background: #212040;*/
+    background: #fff;
+    /*color: #fff;*/
+    color: #222;
+}
+
+.projects h3 {
+    color: #222;
+}
+
+.projects .head {
+    height: 110%;
+    position: absolute;
+    z-index: 8;
+}
+
+.projects .foot {
+    height: 50%;
+}
+
+.projects .carousel-indicators li {
+    border: 1px solid #000;
+}
+
+.projects .imgProjectCarousel {
+    /*background-position: center;*/
+    -webkit-background-size: cover;
+    background-size: cover;
+    background: url(../img/projects/no-screenshot.png) no-repeat;
+    margin-left: 4%;
+    z-index: 4;
+}
+
+.infoProject {
+    position: relative;
+}
+
+.infoProject .description b {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+i.screenshot {
+    background-color: #745B86;
+    border: 4px solid #745B86;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 1px 10px;
+    position: relative;
+    left: 30px;
+    top: 4px;
+}
+
+.infoProject .full-screenshot,
+.infoProject .small-screenshot {
+    /*background: #2b2b2b;*/
+    background: #745b86;
+    /*width: 95%;*/
+    margin: 0 auto;
+}
+
+.infoProject .frame {
+    position: absolute;
+}
+
+.all b,
+.first b {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.imgProject {
+    position: relative;
+}
+
+.imgProject .desctop {
+    width: 73%;
+}
+
+.imgProject .frame {
+    position: absolute;
+    top: 1%;
+    left: -2%;
+    height: 111%;
+}
+/* Projects End */
+
+/* Heart beat Begin */
+/*.heart {
+    font-size: 150px;
+    height: 200px;
+    width: 200px;
+    color: #e00;
+    animation: beat .7s infinite alternate;
+    transform-origin: center;
+}*/
 
 /* Heart beat End */
 
@@ -875,7 +913,12 @@ i.screenshot {
     /*background: #212040;*/
     /*background-color: #32233A;*/
     background: #433E62;
-    color: #CC7C7C;
+    /*color: #CC7C7C;*/
+    color: #96956F;
+}
+
+.progress-bar {
+    background: #38354A !important;
 }
 
 /* Certificates Begin */
@@ -910,8 +953,7 @@ i.screenshot {
 }
 
 .certificate img {
-    border: 1px solid;
-    border-box: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 /* Certificates End */
@@ -1394,15 +1436,6 @@ background-color:blue;
         top: 0;
         left: 100px;
     }
-}
-
-.testx {
-    position: relative;
-}
-
-.test1 {
-    position: relative;
-    z-index: 111;
 }
 
 .test {
