@@ -37,7 +37,7 @@
             behavior: 'smooth'
         });
     </script> -->
-    <!-- <noscript> -->
+    <noscript>
         <style>
             #loader-wrapper,
             #loader-wrapper .loader-section,
@@ -46,7 +46,7 @@
                 display: none;
             }
         </style>
-   <!--  </noscript> -->
+    </noscript>
     <!--  Noscript End  -->
     <title>Roman Matviy | A Front-end Developer's Portfolio</title>
 </head>
@@ -473,12 +473,14 @@
                                 <div class="w-100 mt-5"></div>
                                 <i class="heading-title screenshot">Small screenshot</i>
                                 <img style="width: 100%" :src="'img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid p-1" />
+
                                 <!-- <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid col-9 ml-5 mt-3 pt-1" />
                                 <div class="imgProject m-5">
                                     <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop img-fluid col-9 ml-5 mt-3 pt-1" />
                                     <div class="w-100"></div>
                                     <img src="img/desctop/5.png" class="frame img-fluid d-block w-100 col-11 pt-1" :alt="project.name" />
                                 </div> -->
+
                             </div>
                         </div>
                     </div>
@@ -521,20 +523,6 @@
                     <h2 class="subtitle" style="color: #F8F8F8 !important;">Projects</h2>
                 </div>
                 <div class="row justify-content-center mt-5 mb-5">
-                    <!-- <a v-for="(project, index) of projects" :href="'http://' + project.url">
-                        <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4" v-for="(project, index) of projects" class="list-group-item list-group-item-action pointer">
-                            <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
-                            <h2>{{ project.name }}</h2>
-                            <div class="url">
-                                <a :href="'http://' + project.url">{{ project.url }}</a>
-                                <br>
-                                <a :href="project.github">Source</a>
-                            </div>
-                            <!-- <div class="description">{{ project.desc }}</div> -->
-                    <!-- <div class="date">{{ project.date }}</div>
-                            <div class="project-skills">{{ project.skills }}</div>
-                        </div>
-                    </a> -->
                     <div class="cart1 project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 m-2  list-group-item list-group-item-action" v-for="(project, index) of projects">
                         <a :href="'http://' + project.url">
                             <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
