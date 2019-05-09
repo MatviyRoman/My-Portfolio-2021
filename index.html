@@ -38,8 +38,8 @@
         });
     </script> -->
     <noscript>
-    <style>
-        #loader-wrapper,
+        <style>
+            #loader-wrapper,
             #loader-wrapper .loader-section,
             #loader-wrapper .loader-section.section-left,
             #loader-wrapper .loader-section.section-right {
@@ -115,7 +115,7 @@
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form> -->
                 </div>
-                <a class="nav-link sicon" v-for="(social, index) of socials" :href="social.url"><i :class="social.icon"></i></a>
+                <a class="nav-link sicon" v-for="(social, index) of socials" :href="social.url" target="_blank"><i :class="social.icon"></i></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -135,24 +135,19 @@
                     <h2 class="main-subtitle center tt-sub-intro">Front-end developer</h2><br>
                 </div>
             </section>
-            <a href="#about" class="arrow  bounce  p-5">
+            <a href="#about" class="arrow bounce  p-5" v-if="show">
+                <i class="far fa-arrow-alt-circle-down"></i>
+            </a>
+            <a href="#allProjects" class="arrow bounce  p-5" v-if="!show">
                 <i class="far fa-arrow-alt-circle-down"></i>
             </a>
         </header>
         <!-- Header End -->
-        <!-- <section class="social col-1">
-            <div class="container-fluid">
-                <div class="socials" v-for="(social, index) of socials">
-                    <div class="row">
-                        <div>
-                            <a :href="social.url"><i :class="social.icon"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+        <section class="navigation">
+            <div id="allProjects"></div>
+        </section>
         <!-- About Begin -->
-        <section id="about" class="about pt-5 pb-4">
+        <section v-if="show" id="about" class="about pt-5 pb-4">
             <div class="container">
                 <!-- <div>
                     <h4 class="heading-title">"The Lights" Cast</h4>
@@ -166,7 +161,6 @@
                         <div class="image-container col-md-5 col-12 mr-md-5 mr-0 mt-md-0 mt-4 wow bounceInRight align-self-center" v-on:click="modalOpen">
                             <img src="img/me/blackMe.jpg" class="mt-3 mb-3 wow bounceInLeft d-block img-fluid Roman_Matviy" alt="Front-end developer Roman Matviy" />
                         </div>
-
                         <!-- <button v-on:click="modalOpen">Launch modal</button> -->
                         <!-- <div class="modal" v-bind:class="{'is-active':isActive}">
                             <div class="modal-background"></div>
@@ -229,7 +223,7 @@
         </section>
         <!-- About End -->
         <!-- Skillset Begin -->
-        <section id="skillset" class="skillset pt-5 pb-5">
+        <section v-if="show" id="skillset" class="skillset pt-5 pb-5">
             <div class="container">
                 <!-- <div>
                     <h4 class="heading-title">"The Lights" Cast</h4>
@@ -350,7 +344,7 @@
         </section>
         <!-- Skillset End -->
         <!-- Languages Begin -->
-        <div id="languages" class="languages pt-5 pb-5">
+        <div v-if="show" id="languages" class="languages pt-5 pb-5">
             <div class="container">
                 <!-- <div>
                     <h4 class="heading-title">"The Lights" Cast</h4>
@@ -380,29 +374,8 @@
             </div>
         </div>
         <!-- Languages End -->
-        <!-- Projects Old Version Begin -->
-        <!-- <div class="projects">
-            <div class="container-fluid">
-                <h3>My Projects</h3>
-                <div class="row">
-                    <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4" v-for="(project, index) of projects" class="list-group-item list-group-item-action pointer">
-                        <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
-                        <h2>{{ project.name }}</h2>
-                        <div class="url">
-                            <a :href="'http://' + project.url">{{ project.url }}</a>
-                            <br>
-                            <a :href="project.github">Source</a>
-                        </div>
-                        <div class="description">{{ project.desc }}</div>
-                        <div class="date">{{ project.date }}</div>
-                        <div class="project-skills">{{ project.skills }}</div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Projects Old Version End -->
         <!-- Projects Begin -->
-        <section id="projects" class="projects pt-5 pb-3 mb-5">
+        <section v-if="show" id="projects" class="projects pt-5 pb-3 mb-5">
             <div class="container">
                 <!-- <div>
                     <h4 class="heading-title">"The Lights" Cast</h4>
@@ -484,7 +457,22 @@
                     <!-- infoProject End -->
                 </div>
                 <div class="text row justify-content-around">
-                    <button type="button" class="btn btn-info pt-3 pb-3 pl-5 pr-5">View all projects</button><br>
+                    <!-- <form action="https://www.w3docs.com/" method="get" v-on:click="show = !show">
+                        <button type="submit">Click me</button>
+                    </form> -->
+                    <!-- <form action="https://www.w3docs.com/" v-on:click="show = !show">
+                        <button type="submit">Click me</button>
+                    </form> -->
+                    <!-- <form>
+                        <button type="submit" formaction="/index.html#allProjects" v-on:click="show = !show">Click me</button>
+                    </form> -->
+                    <a class="btn btn-lg textBTN transparent" href="#allProjects" v-on:click="show = !show">
+                        <span style="color: #fff;">
+                            <i class="far fa-list-alt"></i>
+                            View all projects
+                        </span>
+                    </a>
+                    <!-- <button type="button" class="btn btn-info pt-3 pb-3 pl-5 pr-5" formaction="/index.html#allProjects" v-on:click="show = !show">View all projects</button><br> -->
                     <div class="all ml-5">
                         <b>All projects: </b>{{ projects.length }}
                     </div>
@@ -495,8 +483,49 @@
             </div>
         </section>
         <!-- Projects End -->
+        <!-- All Projects Begin -->
+        <section v-if="!show" id="allProjects" class="projects pt-5 pb-3 mb-5">
+            <div class="container">
+                <!-- <div>
+                    <h4 class="heading-title">"The Lights" Cast</h4>
+                </div> -->
+                <div class="section-title">
+                    <h2 class="title wow bounceInRight" style="color: #1A242D !important;">All Projects</h2>
+                    <h2 class="subtitle" style="color: #F8F8F8 !important;">Projects</h2>
+                </div>
+                <div class="row justify-content-center mt-5 mb-5">
+                    <div class="project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 mb-4" v-for="(project, index) of projects" class="list-group-item list-group-item-action pointer">
+                        <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
+                        <h2>{{ project.name }}</h2>
+                        <div class="url">
+                            <a :href="'http://' + project.url">{{ project.url }}</a>
+                            <br>
+                            <a :href="project.github">Source</a>
+                        </div>
+                        <!-- <div class="description">{{ project.desc }}</div> -->
+                        <div class="date">{{ project.date }}</div>
+                        <div class="project-skills">{{ project.skills }}</div>
+                    </div>
+                </div>
+                <div class="text row justify-content-around" style="color: #000">
+                    <a class="btn btn-lg textBTN transparent" href="#top" v-on:click="show = !show">
+                        <span style="color: #fff;">
+                            <i class="fas fa-home"></i>
+                            Go to home
+                        </span>
+                    </a>
+                    <div class="all ml-5">
+                        <b>All projects: </b>{{ projects.length }}
+                    </div>
+                    <div class="first">
+                        <b>The first project is over:</b> 24 Sep 2018
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- All Projects End -->
         <!-- Certificates Begin -->
-        <section id="certificates" class="certificates pt-5 pb-5">
+        <section v-if="show" id="certificates" class="certificates pt-5 pb-5">
             <div class="container">
                 <!-- <div>
                     <h4 class="heading-title">"The Lights" Cast</h4>
@@ -557,7 +586,7 @@
         </section> -->
         <!-- Materials End -->
         <!-- Contact Begin -->
-        <section id="contact" class="contact pt-5 pb-5">
+        <section v-if="show" id="contact" class="contact pt-5 pb-5">
             <div class="container">
                 <!-- <div>
                     <h4 class="heading-title">"The Lights" Cast</h4>
@@ -703,16 +732,16 @@
                         <h2 class="subtitle">social media</h2>
                     </div>
                     <div class="mt-3 pt-3 mb-5 pb-5">
-                        <a class="social-icon mr-3" v-for="(social, index) of socials" :href="social.url">
+                        <a class="social-icon mr-3" v-for="(social, index) of socials" :href="social.url" target="_blank">
                             <i :class="social.icon"></i>
                         </a>
                     </div>
                     <div class="w-100"></div>
                     <div class="copyright text pt-4 pb-3 mt-3">
-                        © Copyright 2018 - &nbsp;<span class="copyrightYear"></span>
+                        ©&nbsp;Copyright&nbsp;2018&nbsp;-&nbsp;<span class="copyrightYear"></span>
                         &nbsp;<a :href="'https://' + about.site" class="link">{{ about.fullname }}</a>
                         <p class="w-100 mb-3"></p>
-                        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                        <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
                             <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Правильний CSS!" />
                         </a>
                     </div>
