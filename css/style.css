@@ -268,8 +268,9 @@ section h3 {
 header {
     background: #1B2C3C;
     color: #FEDD41;
-    z-index: 3;
     position: relative;
+    height: 100vh;
+    z-index: 3;
 }
 
 header .arrow {
