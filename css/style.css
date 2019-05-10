@@ -277,7 +277,7 @@ header .arrow {
     position: absolute;
     bottom: -3%;
     left: 45.5%;
-    transform: translate(-50%, -100%);
+    /*transform: translate(-50%, -100%);*/
     text-decoration: none;
     z-index: 4;
 }
@@ -532,12 +532,12 @@ header .clouds {
 
 /* Loaded styles */
 .loaded #loader-wrapper .loader-section.section-left {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .loaded #loader-wrapper .loader-section.section-right {
-    transform: translateY(100%);
+    transform: translateY(50%);
     transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 

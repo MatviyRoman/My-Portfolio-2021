@@ -507,7 +507,7 @@ const skills = [
 
     skill(
         'Landing Page',
-        '30',
+        '35',
         'img/1.jpg'),
 
     skill(
@@ -522,7 +522,7 @@ const skills = [
 
     skill(
         'UI / UX Design',
-        '25',
+        '40',
         'img/1.jpg')
 ]
 /* Skills End */
