@@ -269,7 +269,6 @@ header {
     background: #1B2C3C;
     color: #FEDD41;
     position: relative;
-    height: 100vh;
     z-index: 3;
 }
 
@@ -408,6 +407,7 @@ header .cover-two {
     padding-bottom: 25%;
     position: relative;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 @media all and (max-width: 725px) {
