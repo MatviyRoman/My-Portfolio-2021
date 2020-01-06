@@ -373,7 +373,7 @@
                 <div class="row justify-content-center mt-5 mb-5">
                     <div id="carouselExampleIndicators" class="col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 carousel sliderProject1" data-ride="carousel">
                         <ol class="carousel-indicators">
-                            <li v-for="(project, index) in projects" data-target="#carouselExampleIndicators" :data-slide-to="index" @click="selectProject(index)" :class="'project-' + index {'active': selectedProjectIndex === index}" :placeholder="project.name">
+                            <li v-for="(project, index) in projects" data-target="#carouselExampleIndicators" :data-slide-to="index" @click="selectProject(index)" :class="'project-' + index + {'active': selectedProjectIndex === index}" :placeholder="project.name">
                             </li>
                         </ol>
                         <div class="carousel-inner">
@@ -454,7 +454,7 @@
                     <!-- <form>
                         <button type="submit" formaction="/index.html#allProjects" v-on:click="show = !show">Click me</button>
                     </form> -->
-                    <a class="btn btn-lg textBTN transparent" href="#allProjects" v-on:click="show = !show">
+                    <a class="btn btn-lg textBTN transparent" href="#top" v-on:click="show = !show">
                         <span style="color: #fff;">
                             <i class="far fa-list-alt"></i>
                             View all projects
