@@ -236,7 +236,7 @@ section h3 {
 }*/
 
 .top {
-    transition: all 10s ease-out;
+    transition: all 5s ease-out;
     position: relative;
     z-index: 1;
 }
