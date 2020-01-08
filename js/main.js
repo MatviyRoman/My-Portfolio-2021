@@ -228,6 +228,11 @@ const frontEnds = [
         'img/1.jpg'),
 
     frontEnd(
+        'CSS Grid',
+        '20',
+        'img/1.jpg'),
+
+    frontEnd(
         'LESS',
         '34',
         'img/1.jpg'),
@@ -928,23 +933,6 @@ new Vue({
 /* Core End */
 
 
-
-// $('.skill:has(img[alt="5 copy_200comp.jpg"])').show();
-
-// let i = skill.num;
-// while (i < skills.length) {
-//   alert( i );
-//   switch (i) {
-//     case ((i>=20 && i<=19)?i:-1): $(this).css("color", "#ffffff"); console.log('0-19');
-//     case ((i>=20 && i<=39)?i:-1): $(".progress-bar").attr("class", "bg-danger"); console.log('20-39');
-//     case ((i>=40 && i<=59)?i:-1): $(".progress-bar").attr("class", "bg-success"); console.log('40-59');
-//     case ((i>=60 && i<=79)?i:-1): $(".progress-bar").attr("class", "bg-info"); console.log('60-79');
-//     default: $(".progress-bar").attr("class", "bg-danger"); console.log('80-100'); break;}
-//   i++;
-// }
-
-
-
 $(document).ready(function() {
     var mc = {
         '0-19': 'bg-danger red',
@@ -1091,7 +1079,6 @@ $(document).ready(function() {
 // });
 
 $("li.active").on("click", function(){
-    // $("li.active").click();
     $("li.active").click();
 });
 
