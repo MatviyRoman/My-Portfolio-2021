@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -32,12 +31,6 @@
     <link rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDLVfUDe3mgO5zuGojTYlQ8h_ik7Y0rRs&callback=initMap" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" as="script">
     <!--  Noscript Begin  -->
-    <!-- <script>
-        window.scrollBy({
-            top: 666,
-            behavior: 'smooth'
-        });
-    </script> -->
     <noscript>
         <style>
             #loader-wrapper,
@@ -77,9 +70,6 @@
         <!-- Header Begin -->
         <header id="top">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <!-- <a class="navbar-brand logo" href="index.html">
-                    <h2>RM</h2>
-                </a> -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -137,10 +127,7 @@
                     <h2 class="main-subtitle center tt-sub-intro">Front-end developer</h2><br>
                     <a v-if="show" v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent" href="#allProjects">
                         <span style="color: #fff;">
-                            <!-- <i class="fas fa-briefcase"></i> -->
-                            <!-- <i class="fab fa-buromobelexperte"></i> -->
                             <i class="fas fa-flask"></i>
-                            <!-- <i class="fas fa-vial"></i> -->
                             WORK EXPERIENCE
                         </span>
                     </a>
@@ -337,20 +324,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="languages">
-            <div class="row justify-content-center mb-3">
-                <div class="language col-lg-2 col-md-12 col-sm-11 col-12" v-for="(language, index) of languages">
-                    <div :class="'c100 p' + language.num + ' dark'" :data-color="language.num">
-                        <span style="color: #fff">{{ language.num }}%</span>
-                        <div class="slice">
-                            <div class="bar"></div>
-                            <div class="fill"></div>
-                        </div>
-                    </div>
-                    <strong class="m-2">{{ language.name }}</strong>
-                </div>
-            </div>
-        </div> -->
         <!-- Languages End -->
         <!-- Projects Begin -->
         <section v-if="show" id="projects" class="projects pt-5 pb-3 mb-5">
@@ -371,21 +344,13 @@
                                 <div class="imgProjectCarousel">
                                     <img :src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
                                 </div>
-                                <!-- <div class="carousel-caption d-none d-md-block">
-                                    <h5>{{ project.name }}</h5>
-                                    <p>{{ index + 1 }}</p>
-                                </div> -->
                             </div>
                         </div>
                         <!-- Buttons Prev&Next Begin -->
                         <a style="font-size: 30px;font-weight: bold;left: -100px;color: #000;margin-right: 90%;width: 10%;text-transform: uppercase" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" @click="selectProject(index-1)">
-                            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span> -->
                             Prev
                         </a>
                         <a style="font-size: 30px;font-weight: bold;left: 100px;color: #000;margin-left: 90%;width: 10%;text-transform: uppercase" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" @click="selectProject(index+1)">
-                            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span> -->
                             Next
                         </a>
                         <!-- Buttons Prev&Next End -->
@@ -420,14 +385,6 @@
                                 <div class="w-100 mt-5"></div>
                                 <i class="heading-title screenshot">Small screenshot</i>
                                 <img style="width: 100%" :src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid p-1" />
-
-                                <!-- <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid col-9 ml-5 mt-3 pt-1" />
-                                <div class="imgProject m-5">
-                                    <img :src="'img/projects/' + project.url + '/screen.png'" :alt="project.name" class="desctop img-fluid col-9 ml-5 mt-3 pt-1" />
-                                    <div class="w-100"></div>
-                                    <img src="img/desctop/5.png" class="frame img-fluid d-block w-100 col-11 pt-1" :alt="project.name" />
-                                </div> -->
-
                             </div>
                         </div>
                     </div>
@@ -529,31 +486,6 @@
             </div>
         </section>
         <!-- Certificates End -->
-        <!-- Materials Begin -->
-        <!-- <section id="materials" class="materials pt-5 pb-5">
-            <div class="container">
-                <h2 class="section-title wow animated pulse mb-5">Additional materials</h2>
-                <div class="row justify-content-center mb-3">
-                    <div class="material mr-sm-3 mr-0 mb-3 col-sm-5 col-11" v-for="(material, index) of materials">
-                        <b>Section:</b><strong class="m-3 pb-2">{{ material.sectionTitle }}</strong>
-                        <br>
-                        <a :href="material.url1"><strong class="m-2 pb-2">{{ material.urlName1 }}</strong></a>
-                        <br>
-                        <a :href="material.url2"><strong class="m-2 pb-2">{{ material.urlName2 }}</strong></a>
-                        <br>
-                        <a :href="material.url3"><strong class="m-2 pb-2">{{ material.urlName3 }}</strong></a>
-                        <br>
-                        <a :href="material.url4"><strong class="m-2 pb-2">{{ material.urlName4 }}</strong></a>
-                        <br>
-                        <a :href="material.url5"><strong class="m-2 pb-2">{{ material.urlName5 }}</strong></a>
-                        <br>
-                        <a :href="material.url6"><strong class="m-2 pb-2">{{ material.urlName6 }}</strong></a>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- Materials End -->
         <!-- Contact Begin -->
         <section v-if="show" id="contact" class="contact pt-5 pb-5">
             <div class="container">
@@ -575,7 +507,6 @@
                         <strong class="pb-2"><a :href="'mailto:' + aboutMe.email">{{ aboutMe.email }}</a></strong><br>
                         skype: <strong class="pb-2">{{ aboutMe.skype }}</strong><br>
                         <strong class="pb-2"><a :href="'tel:' + aboutMe.phone">{{ aboutMe.phone }}</a></strong><br>
-                        <!-- <strong class="pb-2">{{ aboutMe.mobile }}</strong><br> -->
                         location: <strong class="pb-2">{{ aboutMe.location }}</strong><br>
                         nationality: <strong class="pb-2">{{ aboutMe.nationality }}</strong><br>
                         <strong class="pb-2"><a :href="'http://' + aboutMe.github">Github</a></strong>
@@ -722,5 +653,4 @@
     <!-- Moderniz -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </body>
-
 </html>
