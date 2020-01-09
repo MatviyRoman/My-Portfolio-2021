@@ -16,7 +16,7 @@
     <!-- My Style CSS -->
     <link rel="stylesheet" type="text/css" href="./css/style.min.css">
     <!-- Fonts Google -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lora|Merriweather|Roboto&display=swap" rel="preload">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lora|Merriweather|Roboto&display=swap" as="font">
     <!-- Animate CSS / JS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="./css/anim.head.min.css">
@@ -108,15 +108,6 @@
                             </div>
                         </li>
                     </ul>
-                    <!-- <ul class="navbar-nav mr-auto">
-                        <li class="nav-item" v-for="(social, index) of socials">
-                            <a class="nav-link mt-4" :href="social.url"><i :class="social.icon"></i></a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form> -->
                 </div>
                 <a class="nav-link sicon" v-for="(social, index) of socials" :href="social.url" target="_blank"><i :class="social.icon"></i></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -517,7 +508,6 @@
                         <b>Link:</b> <strong class="m-2 pb-2"><a :href="certificate.link">{{ certificate.link }}</a></strong>
                         <br>
                         <b>Download:</b> <a :href="'./certificate/PDF/cert-' + certificate.license + '.pdf'">PDF</a> | <a :href="'./certificate/cert-' + certificate.license + '.jpg'">IMG</a>
-                        <!-- </a> -->
                     </div>
                 </div>
                 <div class="row justify-content-around">
