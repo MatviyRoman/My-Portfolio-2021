@@ -462,7 +462,7 @@
                 </div>
                 <div class="row justify-content-center mt-5 mb-5">
                     <div class="cart1 project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 m-2  list-group-item list-group-item-action" v-for="(project, index) of projects">
-                        <a :href="'http://' + project.url">
+                        <a :href="'http://' + project.url" :title="project.name">
                             <img :src="'./img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
                             <h2>{{ project.name }}</h2>
                             <div class="url">
@@ -508,7 +508,6 @@
                 </div>
                 <div class="row justify-content-around mb-3">
                     <div v-for="(certificate, index) of certificates" :href="'./certificate/PDF/cert-' + certificate.license + '.pdf'" class="text certificate col-sm-5 col-11 mb-5 p-3">
-                        <!-- <a :href="'certificate/PDF/cert-' + certificate.license + '.pdf'"> -->
                         <img :src="'./certificate/thumbs/cert-' + certificate.license + '.jpg'" class="img-fluid mb-3" :alt="'Certificate ' + certificate.name" />
                         <br>
                         <b>Name:</b> <strong class="m-2 pb-2">{{ certificate.name }}</strong>
@@ -519,7 +518,7 @@
                         <br>
                         <b>Link:</b> <strong class="m-2 pb-2"><a :href="certificate.link">{{ certificate.link }}</a></strong>
                         <br>
-                        <b>Download:</b> <a :href="'./certificate/PDF/cert-' + certificate.license + '.pdf'">PDF</a> | <a :href="'./certificate/cert-' + certificate.license + '.png'">IMG</a>
+                        <b>Download:</b> <a :href="'./certificate/PDF/cert-' + certificate.license + '.pdf'">PDF</a> | <a :href="'./certificate/cert-' + certificate.license + '.jpg'">IMG</a>
                         <!-- </a> -->
                     </div>
                 </div>
