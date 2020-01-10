@@ -77,12 +77,6 @@ new WOW().init();
 const aboutMe = (title, fullname, location, nationality, email, skype, phone, mobile, github, linkedin, facebook) => ({ title, fullname, location, nationality, email, skype, phone, mobile, github, linkedin, facebook });
 
 const abouts = [
-    // aboutMe(
-    // 	'HTML 5',
-    // 	'85',
-    // 	'devicon-html5-plain-wordmark colored html',
-    // 	''),
-
     aboutMe(
         'Front-end developer',
         'Roman Matviy',
@@ -567,12 +561,6 @@ const tools = [
         'img/1.jpg',
         'zip/wwwvuejs2.zip'),
 
-    // tool(
-    // 	'Slack',
-    // 	'0',
-    // 	'img/1.jpg',
-    // 	'zip/wwwvuejs2.zip'),
-
     tool(
         'NPM / Webpack',
         '29',
@@ -595,11 +583,10 @@ const programs = [
         '90',
         'img/1.jpg'),
 
-    // program(
-    // 	'Brackets',
-    // 	'40',
-    // 	'img/1.jpg',
-    // 	'zip/wwwvuejs2.zip'),
+    program(
+    	'Figma',
+    	'85',
+    	'img/1.jpg'),
 
     program(
         'Sublime Text 3',
