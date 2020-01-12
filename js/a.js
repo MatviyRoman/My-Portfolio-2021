@@ -122,69 +122,66 @@ const materials = [
     ]
     /* Additional materials End */
     /* Front-End Begin */
-const frontEnd = (name, num, img) => ({
+const frontEnd = (name, num) => ({
     name,
-    num,
-    img
+    num
 });
 const frontEnds = [
-        frontEnd('HTML 5', '85', 'devicon-html5-plain-wordmark colored html'),
-        frontEnd('CSS 3', '80', 'img/1.jpg'),
-        frontEnd('CSS Flexbox', '78', 'img/1.jpg'),
-        frontEnd('CSS Grid', '20', 'img/1.jpg'),
-        frontEnd('LESS', '34', 'img/1.jpg'),
-        frontEnd('JavaScript', '40', 'img/1.jpg')
+        frontEnd('HTML5', '85'),
+        frontEnd('CSS3', '80'),
+        frontEnd('CSS Flexbox', '78'),
+        frontEnd('CSS Grid', '20'),
+        frontEnd('Less/Sass', '34'),
+        frontEnd('JavaScript', '40')
     ]
     /* Front-End End */
     /* Back-End Begin */
-const backEnd = (name, num, img) => ({
+const backEnd = (name, num) => ({
     name,
-    num,
-    img
+    num
 });
 const backEnds = [
-        backEnd('PHP', '20', 'img/1.jpg'),
-        backEnd('MySQL', '15', 'img/1.jpg')
+        backEnd('PHP', '20'),
+        backEnd('MySQL', '15')
     ]
     /* Back-End End */
     /* Certificates Begin */
 const certificate = (date, name, license, link) => ({
-    date,
+    firstDate,
+    secondDate,
     name,
     license,
     link
 });
 const certificates = [
-        certificate('18 Feb 2019', 'Basics of Web UI development / Основи Web UI розробки', '36340060295e40e5b149e02866465b3d', 'https://courses.prometheus.org.ua:18090/cert/36340060295e40e5b149e02866465b3d'),
-        certificate('09 Sep 2018', 'HTML Fundamentals course / Основи HTML розробки', '1014-10299461', 'https://www.sololearn.com/Certificate/1014-10299461/pdf/'),
-        certificate('08 Sep 2018', 'CSS Fundamentals course / Основи CSS розробки', '1023-10299461', 'https://www.sololearn.com/Certificate/1023-10299461/pdf/'),
-        certificate('15 Oct 2018', 'JavaScript Tutorial course / Основи JavaScript розробки', '1024-10299461', 'https://www.sololearn.com/Certificate/1024-10299461/pdf/'),
-        certificate('16 Oct 2018', 'jQuery Tutorial course / Основи jQuery розробки', '1082-10299461', 'https://www.sololearn.com/Certificate/1082-10299461/pdf/')
+        certificate('18 Feb 2019', '', 'Basics of Web UI development / Основи Web UI розробки', '36340060295e40e5b149e02866465b3d', 'https://courses.prometheus.org.ua:18090/cert/36340060295e40e5b149e02866465b3d'),
+        certificate('09 Sep 2018', '', 'HTML Fundamentals course / Основи HTML розробки', '1014-10299461', 'https://www.sololearn.com/Certificate/1014-10299461/pdf/'),
+        certificate('08 Sep 2018', '05 Jan 2020', 'CSS Fundamentals course / Основи CSS розробки', '1023-10299461', 'https://www.sololearn.com/Certificate/1023-10299461/pdf/'),
+        certificate('15 Oct 2018', '06 Dec 2019', 'JavaScript Tutorial course / Основи JavaScript розробки', '1024-10299461', 'https://www.sololearn.com/Certificate/1024-10299461/pdf/'),
+        certificate('16 Oct 2018', '', 'jQuery Tutorial course / Основи jQuery розробки', '1082-10299461', 'https://www.sololearn.com/Certificate/1082-10299461/pdf/')
     ]
     /* Certificates End */
     /* CMS Begin */
-const cms = (name, num, img) => ({
+const cms = (name, num) => ({
     name,
-    num,
-    img
+    num
 });
 const cmss = [
-        cms('OsClass', '75', 'img/1.jpg'),
-        cms('OpenCart', '80', 'img/1.jpg'),
-        cms('WordPress + Elementor', '70', 'img/1.jpg')
+        cms('OsClass', '75'),
+        cms('OpenCart', '80'),
+        cms('WordPress + Elementor', '70')
     ]
     /* CMS End */
     /* Framework Begin */
-const framework = (name, num, img) => ({
+const framework = (name, num) => ({
     name,
-    num,
-    img
+    num
 });
 const frameworks = [
-        framework('Bootstrap', '75', 'img/1.jpg'),
-        framework('jQuery', '40', 'img/1.jpg'),
-        framework('VueJS', '30', 'img/1.jpg'),
-        framework('Angular 2', '20', 'devicon-html5-plain-wordmark colored html')
+        framework('Bootstrap', '75'),
+        framework('jQuery', '40'),
+        framework('VueJS', '30'),
+        framework('Angular 2', '20')
     ]
     /* Framework End */
     /* Language Begin */
@@ -261,49 +258,46 @@ const socials = [
     ]
     /* Social End */
     /* Skills Begin */
-const skill = (name, num, img) => ({
+const skill = (name, num) => ({
     name,
-    num,
-    img
+    num
 });
 const skills = [
-        skill('Browser Developer Tools', '70', 'img/1.jpg'),
-        skill('PSD to HTML5', '87', 'img/1.jpg'),
-        skill('Landing Page', '35', 'img/1.jpg'),
-        skill('Responsive Design', '85', 'img/1.jpg'),
-        skill('Plugin Elementor', '70', 'img/1.jpg'),
-        skill('UI / UX Design', '40', 'img/1.jpg')
+        skill('Browser Developer Tools', '70'),
+        skill('PSD to HTML5', '87'),
+        skill('Landing Page', '60'),
+        skill('Responsive Design', '85'),
+        skill('Plugin Elementor', '70'),
+        skill('UI / UX Design', '50')
     ]
     /* Skills End */
     /* Tool Begin */
-const tool = (name, num, img) => ({
+const tool = (name, num) => ({
     name,
-    num,
-    img
+    num
 });
 const tools = [
-        tool('Chrome Browser', '75', 'img/1.jpg'),
-        tool('Firefox Browser', '63', 'img/1.jpg', 'zip/wwwvuejs2.zip'),
-        tool('Command Line', '45', 'img/1.jpg', 'zip/wwwvuejs2.zip'),
-        tool('Git', '30', 'img/1.jpg', 'zip/wwwvuejs2.zip'),
-        tool('GitHub', '80', 'img/1.jpg', 'zip/wwwvuejs2.zip'),
-        tool('NPM / Webpack', '29', 'img/1.jpg', 'zip/wwwvuejs2.zip'),
+        tool('Chrome Browser', '75'),
+        tool('Firefox Browser', '63'),
+        tool('Command Line', '45'),
+        tool('Git', '30'),
+        tool('GitHub', '80'),
+        tool('NPM / Webpack', '29'),
     ]
     /* Tool End */
     /* Programs Begin */
-const program = (name, num, img) => ({
+const program = (name, num) => ({
     name,
-    num,
-    img
+    num
 });
 const programs = [
-        program('Avocode', '90', 'img/1.jpg'),
-        program('FileZilla (FTP)', '90', 'img/1.jpg'),
-        program('Figma', '85', 'img/1.jpg'),
-        program('Sublime Text 3', '80', 'img/1.jpg'),
-        program('Photoshop', '49', 'img/1.jpg'),
-        program('PhpStorm', '36', 'img/1.jpg'),
-        program('Visual Studio Code', '49', 'img/1.jpg')
+        program('Avocode', '90'),
+        program('FileZilla (FTP)', '90'),
+        program('Figma', '85'),
+        program('Sublime Text 3', '80'),
+        program('Photoshop', '49'),
+        program('PhpStorm', '36'),
+        program('Visual Studio Code', '49')
     ]
     /* Programs End */
     /* Project Begin */
