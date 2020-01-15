@@ -10,6 +10,7 @@
     window.resizeTo() - resize the current window -->
     <p id="screen"></p>
     <script>
+
         var w = window.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
@@ -18,8 +19,10 @@
         document.documentElement.clientHeight ||
         document.body.clientHeight;
 
+        var hTime = setInterval(h, 1000);
+
     var x = document.getElementById("screen");
-    x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+    x.innerHTML = "Browser inner window width: " + w + ", height: " + hTime + ".";
     </script>
     <!-- screen.width
 	screen.height
@@ -154,7 +157,7 @@
     }
     </script>
     <br>
-    
+
     <h2>JavaScript</h2>
     <h3>The window.location object</h3>
     <p id="href"></p>
@@ -188,9 +191,9 @@
     <p id="port"></p>
     <p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
     <script>
-    document.getElementById("port").innerHTML =
-        "The URL port number of the current page is: " + window.location.port;
+    document.getElementById("port").innerHTML = "The URL port number of the current page is: " + window.location.port;
     </script>
+
     <br>
 
 
