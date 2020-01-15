@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- Other Window Methods
+    Some other methods:
+    window.open() - open a new window
+    window.close() - close the current window
+    window.moveTo() - move the current window
+    window.resizeTo() - resize the current window -->
+    <p id="screen"></p>
+    <script>
+        var w = window.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+
+    var h = window.innerHeight ||
+        document.documentElement.clientHeight ||
+        document.body.clientHeight;
+
+    var x = document.getElementById("screen");
+    x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+    </script>
+    <!-- screen.width
+	screen.height
+	screen.availWidth
+	screen.availHeight
+	screen.colorDepth
+	screen.pixelDepth -->
+    <p id="width"></p>
+    <script>
+        document.getElementById("width").innerHTML = 
+"Screen width is " + screen.width;
+</script>
+    <p id="height"></p>
+    <script>
+        document.getElementById("height").innerHTML = 
+"Screen height is " + screen.height;
+</script>
+    <p id="availWidth"></p>
+    <script>
+        document.getElementById("availWidth").innerHTML = 
+"Available screen width is " + screen.availWidth;
+</script>
+    <p id="availHeight"></p>
+    <script>
+        document.getElementById("availHeight").innerHTML = 
+"Available screen height is " + screen.availHeight;
+</script>
+    <p id="colorDepth"></p>
+    <script>
+        document.getElementById("colorDepth").innerHTML = 
+"Screen color depth is " + screen.colorDepth;
+</script>
+    <p id="pixelDepth"></p>
+    <script>
+        document.getElementById("pixelDepth").innerHTML = 
+"Screen pixel depth is " + screen.pixelDepth;
+</script>
+    <h2>JavaScript</h2>
+    <h3>The window.location object</h3>
+    <input type="button" value="Load new document" onclick="newDoc()">
+    <script>
+    function newDoc() {
+        window.location.assign("https://matviy.pp.ua")
+    }
+    </script>
+    <h2>JavaScript Alert</h2>
+    <button onclick="myFunction1()">Try it</button>
+    <script>
+    function myFunction1() {
+        alert("I am an alert box!");
+    }
+    </script>
+    <h2>JavaScript Confirm Box</h2>
+    <button onclick="myFunction2()">Try it</button>
+    <p id="confirmBox"></p>
+    <script>
+    function myFunction2() {
+        var txt;
+        if (confirm("Press a button!")) {
+            txt = "You pressed OK!";
+        } else {
+            txt = "You pressed Cancel!";
+        }
+        document.getElementById("confirmBox").innerHTML = txt;
+    }
+    </script>
+    <h2>JavaScript Prompt</h2>
+    <button onclick="myFunction3()">Try it</button>
+    <p id="prompt"></p>
+    <script>
+    function myFunction3() {
+        var txt;
+        var person = prompt("Please enter your name:", "Harry Potter");
+        if (person == null || person == "") {
+            txt = "User cancelled the prompt.";
+        } else {
+            txt = "Hello " + person + "! How are you today?";
+        }
+        document.getElementById("prompt").innerHTML = txt;
+    }
+    </script>
+    <h2>JavaScript</h2>
+    <p>Line-breaks in a popup box.</p>
+    <button onclick="alert('Hello\nHow are you?')">Try it</button>
+    <p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+    <button onclick="setTimeout(myFunction4, 3000);">Try it</button>
+    <script>
+    function myFunction4() {
+        alert('Hello');
+    }
+    </script>
+    <p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+    <p>Click "Stop" to prevent the first function to execute.</p>
+    <p>(You must click "Stop" before the 3 seconds are up.)</p>
+    <button onclick="myVar = setTimeout(myFunction5, 3000)">Try it</button>
+    <button onclick="clearTimeout(myVar)">Stop it</button>
+    <script>
+    function myFunction5() {
+        alert("Hello");
+    }
+    </script>
+    <p>A script on this page starts this clock:</p>
+    <p id="time"></p>
+    <script>
+    var myVar = setInterval(myTimer, 1000);
+
+    function myTimer() {
+        var d = new Date();
+        document.getElementById("time").innerHTML = d.toLocaleTimeString();
+    }
+    </script>
+    <p>A script on this page starts this clock:</p>
+    <p id="stopTime"></p>
+    <button onclick="clearInterval(myVar)">Stop time</button>
+    <script>
+    var myVar = setInterval(myTimer, 1000);
+
+    function myTimer() {
+        var stopTime = new Date();
+        document.getElementById("stopTime").innerHTML = stopTime.toLocaleTimeString();
+    }
+    </script>
+    <p>A script on this page starts this clock:</p>
+    <p id="demo"></p>
+    <button onclick="clearInterval(myVar)">Stop time</button>
+    <script>
+    var myVar = setInterval(myTimer, 1000);
+
+    function myTimer() {
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+    </script>
+    <br>
+    
+    <h2>JavaScript</h2>
+    <h3>The window.location object</h3>
+    <p id="href"></p>
+    <script>
+    document.getElementById("href").innerHTML =
+        "The full URL of this page is:<br>" + window.location.href;
+    </script>
+    <br>
+
+    <p id="hostname"></p>
+    <script>
+    document.getElementById("hostname").innerHTML =
+        "Page hostname is: " + window.location.hostname;
+    </script>
+    <br>
+
+    <p id="pathname"></p>
+    <script>
+    document.getElementById("pathname").innerHTML =
+        "Page path is: " + window.location.pathname;
+    </script>
+    <br>
+    
+    <p id="protocol"></p>
+    <script>
+    document.getElementById("protocol").innerHTML =
+        "The page protocol is: " + window.location.protocol;
+    </script>
+	<br>
+
+    <p id="port"></p>
+    <p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
+    <script>
+    document.getElementById("port").innerHTML =
+        "The URL port number of the current page is: " + window.location.port;
+    </script>
+    <br>
+
+
+
+
+    <h2>The Navigator Object</h2>
+
+    <p>The appName property returns the application name of the browser:</p>
+    <p id="appName"></p>
+    <p>Strange enough, "Netscape" is the application name for both IE11, Chrome, Firefox, and Safari.</p>
+    <script>
+    document.getElementById("appName").innerHTML =
+        "navigator.appName is " + navigator.appName;
+    </script>
+    <br>
+
+    <p>The appVersion property returns version information about the browser:</p>
+    <p id="appVersion"></p>
+    <script>
+    document.getElementById("appVersion").innerHTML = navigator.appVersion;
+    </script>
+    <br>
+
+    <p>The userAgent property returns the user-agent header sent by the browser to the server:</p>
+    <p id="userAgent"></p>
+    <script>
+    document.getElementById("userAgent").innerHTML =
+        navigator.userAgent;
+    </script>
+    <br>
+
+    <p>The platform property returns the browser platform (operating system):</p>
+    <p id="platform"></p>
+    <script>
+    document.getElementById("platform").innerHTML =
+        "navigator.platform is " + navigator.platform;
+    </script>
+    <br>
+
+    <p>The language property returns the browser's language:</p>
+    <p id="language"></p>
+    <script>
+    document.getElementById("language").innerHTML =
+        "navigator.language is " + navigator.language;
+    </script>
+    <br>
+
+    <p>The onLine property returns true if the browser is online:</p>
+    <p id="onLine"></p>
+    <script>
+    document.getElementById("onLine").innerHTML =
+        "navigator.onLine is " + navigator.onLine;
+    </script>
+    <br>
+
+    <p>The javaEnabled() method returns true if Java is enabled:</p>
+    <p id="javaEnabled"></p>
+    <script>
+    document.getElementById("javaEnabled").innerHTML =
+        "javaEnabled is " + navigator.javaEnabled();
+    </script>
+    <br>
+
+    <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+    <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
+    <p id="demo"></p>
+    <p id="usd"></p>
+    <p id="uah"></p>
+    <p id="buy"></p>
+    <p id="sale"></p>
+    <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            // document.getElementById("usd").innerHTML = myObj[0].ccy;
+            // document.getElementById("uah").innerHTML = myObj[0].base_ccy;
+            // document.getElementById("buy").innerHTML = myObj[0].buy;
+            // document.getElementById("sale").innerHTML = myObj[0].sale;
+
+
+            var myObj, i, j, x = "";
+            myObj = {
+                "name": "John",
+                "age": 30,
+                "cars": [
+                    { "name": "Ford", "models": ["Fiesta", "Focus", "Mustang"] },
+                    { "name": "BMW", "models": ["320", "X3", "X5"] },
+                    { "name": "Fiat", "models": ["500", "Panda"] }
+                ]
+            }
+            for (i in myObj.cars) {
+                x += "<h2>" + myObj.cars[i].name + "</h2>";
+                for (j in myObj.cars[i].models) {
+                    x += myObj.cars[i].models[j] + "<br>";
+                }
+            }
+            document.getElementById("demo").innerHTML = x;
+
+
+        }
+    };
+    xmlhttp.open("GET", "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5", true);
+    xmlhttp.send();
+    </script>
+    <p>Take a look at <a href="https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5" target="_blank">https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5</a></p>
+</body>
+
+</html>
