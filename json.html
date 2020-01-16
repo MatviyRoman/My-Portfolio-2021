@@ -11,55 +11,49 @@
     <p id="screen"></p>
     <script>
 
-        var w = window.innerWidth ||
-        document.documentElement.clientWidth ||
-        document.body.clientWidth;
+ 
 
-    var h = window.innerHeight ||
-        document.documentElement.clientHeight ||
-        document.body.clientHeight;
+        var funcRepeat = setInterval(hTime, 1000);
 
-        var hTime = setInterval(h, 1000);
 
-    var x = document.getElementById("screen");
-    x.innerHTML = "Browser inner window width: " + w + ", height: " + hTime + ".";
+       	function hTime() {
+       		var w = window.innerWidth ||
+	        document.documentElement.clientWidth ||
+	        document.body.clientWidth;
+
+	    	var h = window.innerHeight ||
+	        document.documentElement.clientHeight ||
+	        document.body.clientHeight;
+	       	var x = document.getElementById("screen");
+	    	x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+       	}
+    
     </script>
-    <!-- screen.width
-	screen.height
-	screen.availWidth
-	screen.availHeight
-	screen.colorDepth
-	screen.pixelDepth -->
-    <p id="width"></p>
-    <script>
-        document.getElementById("width").innerHTML = 
-"Screen width is " + screen.width;
-</script>
+
+
+	<p id="width"></p>
     <p id="height"></p>
-    <script>
-        document.getElementById("height").innerHTML = 
-"Screen height is " + screen.height;
-</script>
     <p id="availWidth"></p>
-    <script>
-        document.getElementById("availWidth").innerHTML = 
-"Available screen width is " + screen.availWidth;
-</script>
     <p id="availHeight"></p>
     <script>
-        document.getElementById("availHeight").innerHTML = 
-"Available screen height is " + screen.availHeight;
-</script>
+		var screenSizeRepeat = setInterval(screenSize, 1000);
+
+    	function screenSize() {
+    		document.getElementById("width").innerHTML = "Screen width is " + screen.width;
+        	document.getElementById("height").innerHTML = "Screen height is " + screen.height;
+        	document.getElementById("availWidth").innerHTML = "Available screen width is " + screen.availWidth;
+        	document.getElementById("availHeight").innerHTML = "Available screen height is " + screen.availHeight;
+        }
+	</script>
+    
     <p id="colorDepth"></p>
-    <script>
-        document.getElementById("colorDepth").innerHTML = 
-"Screen color depth is " + screen.colorDepth;
-</script>
     <p id="pixelDepth"></p>
     <script>
-        document.getElementById("pixelDepth").innerHTML = 
-"Screen pixel depth is " + screen.pixelDepth;
-</script>
+        document.getElementById("colorDepth").innerHTML = "Screen color depth is " + screen.colorDepth;
+        document.getElementById("pixelDepth").innerHTML = "Screen pixel depth is " + screen.pixelDepth;
+	</script>
+
+
     <h2>JavaScript</h2>
     <h3>The window.location object</h3>
     <input type="button" value="Load new document" onclick="newDoc()">
@@ -161,39 +155,19 @@
     <h2>JavaScript</h2>
     <h3>The window.location object</h3>
     <p id="href"></p>
-    <script>
-    document.getElementById("href").innerHTML =
-        "The full URL of this page is:<br>" + window.location.href;
-    </script>
-    <br>
-
     <p id="hostname"></p>
-    <script>
-    document.getElementById("hostname").innerHTML =
-        "Page hostname is: " + window.location.hostname;
-    </script>
-    <br>
-
     <p id="pathname"></p>
-    <script>
-    document.getElementById("pathname").innerHTML =
-        "Page path is: " + window.location.pathname;
-    </script>
-    <br>
-    
     <p id="protocol"></p>
-    <script>
-    document.getElementById("protocol").innerHTML =
-        "The page protocol is: " + window.location.protocol;
-    </script>
-	<br>
-
     <p id="port"></p>
     <p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
-    <script>
-    document.getElementById("port").innerHTML = "The URL port number of the current page is: " + window.location.port;
-    </script>
 
+    <script>
+    document.getElementById("href").innerHTML = "The full URL of this page is:<br>" + window.location.href;
+	document.getElementById("hostname").innerHTML = "Page hostname is: " + window.location.hostname;
+	document.getElementById("pathname").innerHTML = "Page path is: " + window.location.pathname;
+	document.getElementById("protocol").innerHTML = "The page protocol is: " + window.location.protocol;
+	document.getElementById("port").innerHTML = "The URL port number of the current page is: " + window.location.port;
+    </script>
     <br>
 
 
@@ -204,62 +178,36 @@
     <p>The appName property returns the application name of the browser:</p>
     <p id="appName"></p>
     <p>Strange enough, "Netscape" is the application name for both IE11, Chrome, Firefox, and Safari.</p>
-    <script>
-    document.getElementById("appName").innerHTML =
-        "navigator.appName is " + navigator.appName;
-    </script>
     <br>
-
     <p>The appVersion property returns version information about the browser:</p>
     <p id="appVersion"></p>
-    <script>
-    document.getElementById("appVersion").innerHTML = navigator.appVersion;
-    </script>
-    <br>
-
     <p>The userAgent property returns the user-agent header sent by the browser to the server:</p>
     <p id="userAgent"></p>
-    <script>
-    document.getElementById("userAgent").innerHTML =
-        navigator.userAgent;
-    </script>
-    <br>
-
     <p>The platform property returns the browser platform (operating system):</p>
     <p id="platform"></p>
-    <script>
-    document.getElementById("platform").innerHTML =
-        "navigator.platform is " + navigator.platform;
-    </script>
-    <br>
-
     <p>The language property returns the browser's language:</p>
     <p id="language"></p>
-    <script>
-    document.getElementById("language").innerHTML =
-        "navigator.language is " + navigator.language;
-    </script>
-    <br>
-
     <p>The onLine property returns true if the browser is online:</p>
     <p id="onLine"></p>
-    <script>
-    document.getElementById("onLine").innerHTML =
-        "navigator.onLine is " + navigator.onLine;
-    </script>
-    <br>
-
     <p>The javaEnabled() method returns true if Java is enabled:</p>
     <p id="javaEnabled"></p>
     <script>
-    document.getElementById("javaEnabled").innerHTML =
-        "javaEnabled is " + navigator.javaEnabled();
+    document.getElementById("appName").innerHTML = "navigator.appName is " + navigator.appName;
+    document.getElementById("appVersion").innerHTML = navigator.appVersion;
+    document.getElementById("userAgent").innerHTML = navigator.userAgent;
+    document.getElementById("platform").innerHTML = "navigator.platform is " + navigator.platform;
+    document.getElementById("language").innerHTML = "navigator.language is " + navigator.language;
+    document.getElementById("onLine").innerHTML = "navigator.onLine is " + navigator.onLine;
+    document.getElementById("javaEnabled").innerHTML = "javaEnabled is " + navigator.javaEnabled();
     </script>
     <br>
 
+
+    
+
     <h2>Use the XMLHttpRequest to get the content of a file.</h2>
     <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
-    <p id="demo"></p>
+    <p id="test"></p>
     <p id="usd"></p>
     <p id="uah"></p>
     <p id="buy"></p>
@@ -269,10 +217,10 @@
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var myObj = JSON.parse(this.responseText);
-            // document.getElementById("usd").innerHTML = myObj[0].ccy;
-            // document.getElementById("uah").innerHTML = myObj[0].base_ccy;
-            // document.getElementById("buy").innerHTML = myObj[0].buy;
-            // document.getElementById("sale").innerHTML = myObj[0].sale;
+            document.getElementById("usd").innerHTML = myObj[0].ccy;
+            document.getElementById("uah").innerHTML = myObj[0].base_ccy;
+            document.getElementById("buy").innerHTML = myObj[0].buy;
+            document.getElementById("sale").innerHTML = myObj[0].sale;
 
 
             var myObj, i, j, x = "";
@@ -291,7 +239,7 @@
                     x += myObj.cars[i].models[j] + "<br>";
                 }
             }
-            document.getElementById("demo").innerHTML = x;
+            document.getElementById("test").innerHTML = x;
 
 
         }
