@@ -189,34 +189,41 @@
     <h2>Use the XMLHttpRequest to get the content of a file.</h2>
     <p>The content is written in JSON format, and can easily be converted into a JavaScript object.</p>
     <p id="test"></p>
-    <p id="testing"></p>
     <script>
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var a = JSON.parse(this.responseText),
-                b;
+                b,buy,sale;
 
             b += a[0].ccy + "\n";
             b += a[0].base_ccy + "<br>";
-            b += a[0].buy + "\n";
-            b += a[0].sale + "\n";
+            buy = (a[0].buy * 1);
+            b += buy.toFixed(2) + "\n";
+            sale = (a[0].sale * 1);
+            b += sale.toFixed(2) + "\n";
             b += "<br>";
             b += a[1].ccy + "\n";
             b += a[1].base_ccy + "<br>";
-            b += a[1].buy + "\n";
-            b += a[1].sale + "\n";
+            buy = (a[1].buy * 1);
+            b += buy.toFixed(2) + "\n";
+            sale = (a[1].sale * 1);
+            b += sale.toFixed(2) + "\n";
             b += "<br>";
             b += a[2].ccy + "\n";
             b += a[2].base_ccy + "<br>";
-            b += a[2].buy + "\n";
-            b += a[2].sale + "\n";
+            buy = (a[2].buy * 1);
+            b += buy.toFixed(2) + "\n";
+            sale = (a[2].sale * 1);
+            b += sale.toFixed(2) + "\n";
             b += "<br>";
             b += a[3].ccy + "\n";
             b += a[3].base_ccy + "<br>";
-            b += a[3].buy + "\n";
-            b += a[3].sale + "\n";
-            document.getElementById("testing").innerHTML = b;
+            buy = (a[3].buy * 1);
+            b += buy.toFixed(2) + "\n";
+            sale = (a[3].sale * 1);
+            b += sale.toFixed(2) + "\n";
+            document.getElementById("test").innerHTML = b;
 
         }
     };
