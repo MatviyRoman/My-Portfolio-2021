@@ -9,9 +9,6 @@
     <title>Roman Matviy | A Ukraine/Lviv Front-end Developer's Portfolio</title>
     <!-- Preload Fonts -->
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lora|Merriweather|Roboto&display=swap" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./icon/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./icon/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./icon/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <!-- Preload JS -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" as="script">
@@ -24,8 +21,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" type="text/css">
     <!-- Circle -->
     <link rel="stylesheet" href="./css/circle.min.css" type="text/css">
-    <!-- Fontawesome CSS-->
-    <link rel="stylesheet" href="./icon/css/all.min.css" type="text/css">
     <!-- My Style CSS -->
     <link rel="stylesheet" href="./css/style.min.css" type="text/css">
     <!-- Animate CSS / JS -->
@@ -66,7 +61,7 @@
     <!--  loader-wrapper End  -->
     <div id="Roman_Matviy">
         <div class="top">
-            <a href="#top"><i class="far fa-arrow-alt-to-top"></i></a>
+            <a href="#top"><i class="icon arror-up"></i></a>
         </div>
         <!-- Header Begin -->
         <header id="top">
@@ -108,7 +103,9 @@
                         </li>
                     </ul>
                 </div>
-                <a class="nav-link sicon" v-for="(social, index) of socials" :href="social.url" target="_blank"><i :class="social.icon"></i></a>
+                <a class="nav-link sicon" v-for="(social, index) of socials" :href="social.url" target="_blank">
+                    <icon :class="social.icon"></icon>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -128,23 +125,23 @@
                     <h2 class="main-subtitle center tt-sub-intro">Front-end developer</h2><br>
                     <a v-if="show" v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent" href="#allProjects">
                         <span style="color: #fff;">
-                            <i class="fas fa-flask"></i>
+                            <i class="icon flask"></i>
                             WORK EXPERIENCE
                         </span>
                     </a>
                     <a v-if="!show" v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent" href="mailto:roman@matviy.pp.ua">
                         <span style="color: #fff;">
-                            <i class="fa fa-briefcase"></i>
+                            <i class="icon briefcase"></i>
                             Hire Me
                         </span>
                     </a>
                 </div>
             </section>
             <a v-if="show" href="#about" class="arrow bounce p-5">
-                <i class="far fa-arrow-alt-circle-down"></i>
+                <i class="icon arrow-down"></i>
             </a>
             <a v-if="!show" href="#allProjects" class="arrow bounce p-5">
-                <i class="far fa-arrow-alt-circle-down"></i>
+                <i class="icon arrow-down"></i>
             </a>
         </header>
         <!-- Header End -->
@@ -181,11 +178,11 @@
                             </div>
                             <div class="download-button wow tada">
                                 <a class="btn btn-lg textBTN bg-transparent mr-3" href="./pdf/Roman.Matviy.CV.pdf">
-                                    <i class="fas fa-file-download"></i>
+                                    <i class="icon file-download"></i>
                                     Download CV
                                 </a>
                                 <a class="btn btn-lg textBTN transparent" href="#contact">
-                                    <i class="fa fa-briefcase"></i>
+                                    <i class="icon briefcase"></i>
                                     Hire Me
                                 </a>
                             </div>
@@ -438,13 +435,13 @@
                 <div class="text row justify-content-around" style="color: #000">
                     <a v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent2" href="#top">
                         <span style="color: #745B86;">
-                            <i class="fas fa-home" style="color: #745B86;"></i>
+                            <i class="icon home" style="color: #745B86;"></i>
                             Go to home
                         </span>
                     </a>
                     <a v-on:click="show = !show" class="btn btn-lg textBTN transparent" href="mailto:roman@matviy.pp.ua">
                         <span style="color: #fff;">
-                            <i class="fa fa-briefcase"></i>
+                            <i class="icon briefcase"></i>
                             Hire Me
                         </span>
                     </a>
@@ -560,7 +557,7 @@
                                     <small class="form__error"></small>
                                 </div>
                                 <div class="col-xs-5 col-md-12">
-                                    <button class="form__submit btn text pull-xs-right" id="sendEmail"><i class="far fa-paper-plane"></i>Send email</button>
+                                    <button class="form__submit btn text pull-xs-right" id="sendEmail"><i class="icon paper-plane"></i>Send email</button>
                                 </div>
                             </div>
                         </form>
