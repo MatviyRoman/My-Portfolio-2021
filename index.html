@@ -43,7 +43,7 @@
     <div id="loader-wrapper">
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-        <div class="intro" style="z-index: 11;">
+        <div class="intro" style="z-index: 1;">
             <div class="tt-text-intro">
                 <h1 class="tt-headline letters rotate-2">
                     <span class="tt-words-wrapper author">
@@ -112,15 +112,15 @@
                 <div class="overlay"></div>
                 <div class="intro">
                     <div class="tt-text-intro">
-                        <h1 class="tt-headline letters rotate-2">
-                            <span class="tt-words-wrapper author" style="width: 100% !important;">
+                        <h1 class="tt-headline letters rotate-2" style="z-index: 100">
+                            <span class="tt-words-wrapper author" style="width: 100% !important">
                                 <b class="is-visible" style="opacity: 1;"><i class="in"><em>I</em></i><i class="in"><em>'</em></i><i class="in"><em>m</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>R</em></i><i class="in"><em>o</em></i><i class="in"><em>m</em></i><i class="in"><em>a</em><em>n</em></i><i class="in"><em>&nbsp;</em></i><i class="in"><em>M</em></i><i class="in"><em>a</em></i><i class="in"><em>t</em><em>v</em><em>i</em><em>y</em></i></b>
                                 <b style="opacity: 1;"><i class="out"><em>I</em></i><i class="out"><em>'</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>F</em></i><i class="out"><em>r</em></i><i class="out"><em>o</em></i><i class="out"><em>m</em></i><i class="out"><em>&nbsp;</em></i><i class="out"><em>U</em></i><i class="out"><em>k</em></i><i class="out"><em>r</em></i><i class="out"><em>a</em></i><i class="out"><em>i</em></i><i class="out"><em>n</em></i><i class="out"><em>e</em></i></b>
                             </span>
                         </h1>
                     </div>
                     <h2 class="main-subtitle center tt-sub-intro">Front-end developer</h2><br>
-                    <a v-if="show" v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent" href="#allProjects">
+                    <a v-if="show" v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent" href="#all">
                         <span style="color: #fff;">
                             <i class="icon flask"></i>
                             WORK EXPERIENCE
@@ -134,11 +134,11 @@
                     </a>
                 </div>
             </section>
-            <a v-if="show" href="#about" class="arrow bounce p-5">
-                <i class="icon arrow-down"></i>
+            <a v-if="show" href="#about" class="arrow bounce">
+                <i class="icon arrow_down"></i>
             </a>
-            <a v-if="!show" href="#allProjects" class="arrow bounce p-5">
-                <i class="icon arrow-down"></i>
+            <a v-if="!show" href="#allProjects" class="arrow bounce">
+                <i class="icon arrow_down"></i>
             </a>
         </header>
         <!-- Header End -->
@@ -175,7 +175,7 @@
                             </div>
                             <div class="download-button wow tada">
                                 <a class="btn btn-lg textBTN bg-transparent mr-3" href="./pdf/Roman.Matviy.CV.pdf">
-                                    <i class="icon file-download"></i>
+                                    <i class="icon file_download"></i>
                                     Download CV
                                 </a>
                                 <a class="btn btn-lg textBTN transparent" href="#contact">
@@ -405,7 +405,8 @@
                 </div>
             </div>
         </section>
-        <!-- Projects End -->
+        <!-- Projects End --> 
+        <p id="all"></p>
         <!-- All Projects Begin -->
         <section v-if="!show" id="allProjects" class="projects pt-5 pb-3 mb-5">
             <div class="container">
@@ -432,7 +433,7 @@
                 <div class="text row justify-content-around" style="color: #000">
                     <a v-on:click="show = !show" class="btn btn-lg textBTN bg-transparent2" href="#top">
                         <span style="color: #745B86;">
-                            <i class="icon home" style="color: #745B86;"></i>
+                            <i class="icon black home" style="color: #745B86;"></i>
                             Go to home
                         </span>
                     </a>
@@ -520,33 +521,19 @@
                             <div class="form__control">
                                 <input class="form__input" type="text" id="name" name="name" placeholder="Your name">
                                 <label class="form__label">
-                                    <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                        <g fill="#FFF">
-                                            <path d="M8.518 11.45h.146c-.04-.032-.08-.065-.114-.1-1.157-1.043-2.038-3.074-2.038-4.714 0-2.322 1.9-3.848 3.697-3.848 1.795 0 3.6 1.65 3.6 3.972 0 1.64-.976 3.608-2.187 4.616.248.947 1.607 1.257 4.41 2.025 3.113.854 2.575 2.97 2.566 4.388H1.8c-.01-1.418-.78-3.534 2.332-4.387 2.725-.75 4.082-1.062 4.386-1.95z"></path>
-                                            <path d="M8.663 11.45h-.145l.03-.1c.035.038.075.068.115.1z"></path>
-                                        </g>
-                                    </svg>
+                                    <i class="icon form user"></i>
                                 </label>
                             </div>
                             <div class="form__control">
                                 <input class="form__input" type="email" id="email" name="email" placeholder="Your email">
                                 <label class="form__label">
-                                    <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                        <g fill="#FFF">
-                                            <path d="M10.267 12.27c-.093.094-.22.145-.352.145s-.26-.055-.355-.145L3.048 5.755C3.028 5.835 3 5.912 3 6v8c0 .552.447 1 1 1h12c.554 0 1-.447 1-1V6c0-.138-.023-.27-.076-.387l-6.657 6.657z"></path>
-                                            <path d="M9.915 11.208l6.187-6.188c-.038-.003-.065-.02-.1-.02H4c-.086 0-.164.03-.245.048l6.16 6.16z"></path>
-                                        </g>
-                                    </svg>
+                                    <i class="icon form envelope"></i>
                                 </label>
                             </div>
                             <div class="form__control">
                                 <textarea class="form__textarea" id="message" name="message" placeholder="Your message"></textarea>
                                 <label class="form__label">
-                                    <svg class="form__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                        <g fill="#FFF">
-                                            <path d="M2.99 17l4.18-1.124-3.06-3.057M15.043 8.02l-7.497 7.498-3.073-3.072 7.497-7.5zM15.653 3.46c-.61-.613-1.57-.613-2.182 0L12.33 4.6l3.08 3.08 1.143-1.142c.61-.61.61-1.57 0-2.182l-.897-.897z"></path>
-                                        </g>
-                                    </svg>
+                                    <i class="icon form pencil"></i>
                                 </label>
                             </div>
                             <div class="row row-xs-center">
@@ -554,7 +541,7 @@
                                     <small class="form__error"></small>
                                 </div>
                                 <div class="col-xs-5 col-md-12">
-                                    <button class="form__submit btn text pull-xs-right" id="sendEmail"><i class="icon paper-plane"></i>Send email</button>
+                                    <button class="form__submit btn text pull-xs-right" id="sendEmail"><i class="icon paper_plane"></i>Send email</button>
                                 </div>
                             </div>
                         </form>
@@ -591,7 +578,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="contacts" class="right col-12 col-sm-12 col-md-12 pt-5 p-3 mb-5">
+                    <div id="contacts" class="right col-12 col-sm-12 col-md-4 pt-5 p-3 mb-5">
                         <strong class="main-subtitle"><b class="heading-title">My Feedbacks</b><br>Contacts</strong>
                         <div class="contacts">
                             <ul>
@@ -608,7 +595,7 @@
             </div>
             <div class="container-fluid">
                 <div class="row justify-content-center">
-                    <div id="map">My map will go here</div>
+                    <div id="map"></div>
                 </div>
             </div>
             <div class="container-fluid">
@@ -618,8 +605,10 @@
                         <h2 class="subtitle d-none d-md-block">social media</h2>
                     </div>
                     <div class="mt-3 pt-3 mb-5 pb-5">
-                        <a class="social-icon mr-3" v-for="(social, index) of socials" :href="social.url" target="_blank">
-                            <i :class="social.icon"></i>
+                        <a class="mr-3" v-for="(social, index) of socials" :href="social.url" target="_blank">
+                            <span class="social-icon">
+                                <i :class="social.icon"></i>
+                            </span>
                         </a>
                     </div>
                     <div class="w-100"></div>
