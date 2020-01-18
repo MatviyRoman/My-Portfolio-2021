@@ -1,0 +1,24 @@
+<!-- Materials Begin -->
+<section id="materials" class="materials pt-5 pb-5">
+    <div class="container">
+        <h2 class="section-title wow animated pulse mb-5">Additional materials</h2>
+        <div class="row justify-content-center mb-3">
+            <div class="material mr-sm-3 mr-0 mb-3 col-sm-5 col-11" v-for="(material, index) of materials">
+                <b>Section:</b><strong class="m-3 pb-2">{{ material.sectionTitle }}</strong>
+                <br>
+                <a :href="material.url1"><strong class="m-2 pb-2">{{ material.urlName1 }}</strong></a>
+                <br>
+                <a :href="material.url2"><strong class="m-2 pb-2">{{ material.urlName2 }}</strong></a>
+                <br>
+                <a :href="material.url3"><strong class="m-2 pb-2">{{ material.urlName3 }}</strong></a>
+                <br>
+                <a :href="material.url4"><strong class="m-2 pb-2">{{ material.urlName4 }}</strong></a>
+                <br>
+                <a :href="material.url5"><strong class="m-2 pb-2">{{ material.urlName5 }}</strong></a>
+                <br>
+                <a :href="material.url6"><strong class="m-2 pb-2">{{ material.urlName6 }}</strong></a>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
