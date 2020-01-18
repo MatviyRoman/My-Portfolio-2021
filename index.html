@@ -16,6 +16,7 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" as="script">
     <link rel="preload" href="./js/main.min.js" as="script">
     <link rel="preload" href="./js/animhead.min.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" as="script">
     <link rel="preload" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDLVfUDe3mgO5zuGojTYlQ8h_ik7Y0rRs&callback=initMap" as="script">
     <!-- Bootstrap CSS -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -304,7 +305,7 @@
                 </div>
                 <div class="row justify-content-around">
                     <div class="d-none d-md-block col-lg-2 col-md-7 col-7 mt-lg-0 mt-md-4">
-                        <img src="img/languages/bg.png" alt="world languages" class="img-fluid world" />
+                        <img data-src="img/languages/bg.png" alt="world languages" class="lazyload img-fluid world" />
                     </div>
                     <div class="col-lg-2 col-md-6 col-6 single-chart language" v-for="(language, index) of languages">
                         <svg viewBox="0 0 36 36" class="circular-chart" :circle-color="language.num">
@@ -337,7 +338,7 @@
                             </li>
                         </ol>
                         <div class="carousel-inner">
-                            <img src="./img/desctop/head.png" alt="head" class="head d-block w-100" />
+                            <img data-src="./img/desctop/head.png" alt="head" class="lazyload head d-block w-100" />
                             <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
                                 <div class="imgProjectCarousel">
                                     <img :src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
@@ -355,7 +356,7 @@
                         <div class="w-100"></div>
                     </div>
                     <div class="w-100"></div>
-                    <img src="./img/desctop/foot.png" alt="foot" class="foot col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 d-block w-100" />
+                    <img data-src="./img/desctop/foot.png" alt="foot" class="lazyload foot col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 d-block w-100" />
                     <div class="w-100"></div>
                     <!-- infoProject Begin -->
                     <div class="infoProject">
@@ -657,6 +658,8 @@
     <script src="js/main.min.js" async defer></script>
     <!-- Animated Headline -->
     <script src="js/animhead.min.js" async defer></script>
+    <!-- Lazysizes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async defer></script>
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDLVfUDe3mgO5zuGojTYlQ8h_ik7Y0rRs&callback=initMap" async defer></script>
 </body>
