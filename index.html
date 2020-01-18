@@ -341,7 +341,7 @@
                             <img data-src="./img/desctop/head.png" alt="head" class="lazyload head d-block w-100" />
                             <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
                                 <div class="imgProjectCarousel">
-                                    <img :src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
+                                    <img :data-src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="lazyload d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
                                 </div>
                             </div>
                         </div>
@@ -366,7 +366,7 @@
                                 <i class="heading-title screenshot">
                                     Full screenshot
                                 </i>
-                                <img style="width: 100%" :src="'./img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="full-screenshot img-fluid p-1">
+                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="lazyload full-screenshot img-fluid p-1">
                             </div>
                             <div class="text description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
                                 <b>Project completion date:</b> <time pubdate :datetime="project.date">{{ project.date }}</time>
@@ -387,7 +387,7 @@
                                 <i class="heading-title screenshot">
                                     Small screenshot
                                 </i>
-                                <img style="width: 100%" :src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="desctop small-screenshot img-fluid p-1" />
+                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="lazyload desctop small-screenshot img-fluid p-1" />
                             </div>
                         </div>
                     </div>
@@ -466,7 +466,7 @@
                 </div>
                 <div class="row justify-content-around mb-3">
                     <div v-for="(certificate, index) of certificates" :href="'./certificate/PDF/cert-' + certificate.license + '.pdf'" class="text certificate col-lg-5 col-md-5 col-sm-11 col-11 mb-5 p-3">
-                        <img :src="'./certificate/thumbs/cert-' + certificate.license + '.jpg'" class="img-fluid mb-3" :alt="'Certificate ' + certificate.name" />
+                        <img :data-src="'./certificate/thumbs/cert-' + certificate.license + '.jpg'" class="lazyload img-fluid mb-3" :alt="'Certificate ' + certificate.name" />
                         <br>
                         <b>Name:</b> <strong class="m-2 pb-2">{{ certificate.name }}</strong>
                         <br>
