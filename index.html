@@ -156,7 +156,7 @@
                 <div class="abouts" v-for="(aboutMe, index) of abouts">
                     <div class="row">
                         <div class="image-container col-lg-5 col-md-12 col-12 mr-md-5 mr-0 mt-md-0 mt-4 wow bounceInRight align-self-center" v-on:click="modalOpen">
-                            <img data-src="img/me/blackMe.jpg" class="lazyload mt-3 mb-3 wow bounceInLeft d-block img-fluid Roman_Matviy" alt="Front-end developer Ukraine/Lviv Roman Matviy" />
+                            <img data-src="img/me/blackMe.jpg" class="lazyload mt-3 mb-3 wow bounceInLeft d-block img-fluid Roman_Matviy" title="Front-end developer Ukraine/Lviv Roman Matviy" alt="Front-end developer Ukraine/Lviv Roman Matviy" />
                         </div>
                         <div class="col-lg-6 col-md-12 col-12 p-5 align-self-center">
                             <div class="row align-content-center mb-5">
@@ -305,7 +305,7 @@
                 </div>
                 <div class="row justify-content-around">
                     <div class="d-none d-md-block col-lg-2 col-md-7 col-7 mt-lg-0 mt-md-4">
-                        <img data-src="img/languages/bg.png" alt="world languages" class="lazyload img-fluid world" />
+                        <img data-src="img/languages/bg.png" title="world languages" alt="world languages" class="lazyload img-fluid world" />
                     </div>
                     <div class="col-lg-2 col-md-6 col-6 single-chart language" v-for="(language, index) of languages">
                         <svg viewBox="0 0 36 36" class="circular-chart" :circle-color="language.num">
@@ -341,7 +341,7 @@
                             <img data-src="./img/desctop/head.png" alt="head" class="lazyload head d-block w-100" />
                             <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
                                 <div class="imgProjectCarousel">
-                                    <img :data-src="'./img/projects/' + project.url + '-screen.png'" :alt="project.name" class="lazyload d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" style="position: absolute; z-index: 11; top: -15px;" />
+                                    <img :data-src="'./img/projects/' + project.url + '-screen.png'" :title="project.name" :alt="project.name" class="lazyload d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" style="position: absolute; z-index: 11; top: -15px;" />
                                     <img src="./img/projects/no-screenshot.png" alt="no-screenshot" style="position: relative;" class="d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
                                 </div>
                             </div>
@@ -367,7 +367,7 @@
                                 <i class="heading-title screenshot">
                                     Full screenshot
                                 </i>
-                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '-full-screen.png'" :alt="project.name" class="lazyload full-screenshot img-fluid p-1">
+                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '-full-screen.png'" :title="project.name" :alt="project.name" class="lazyload full-screenshot img-fluid p-1">
                             </div>
                             <div class="text description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
                                 <b>Project completion date:</b> <time pubdate :datetime="project.date">{{ project.date }}</time>
@@ -388,7 +388,7 @@
                                 <i class="heading-title screenshot">
                                     Small screenshot
                                 </i>
-                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '-screen.png'" :alt="project.name" class="lazyload desctop small-screenshot img-fluid p-1" />
+                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '-screen.png'" :title="project.name" :alt="project.name" class="lazyload desctop small-screenshot img-fluid p-1" />
                             </div>
                         </div>
                     </div>
@@ -422,7 +422,7 @@
                 <div class="row justify-content-center mt-5 mb-5">
                     <div class="cart1 project col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 m-2  list-group-item list-group-item-action" v-for="(project, index) of projects">
                         <a :href="'http://' + project.url" :title="project.name">
-                            <img :src="'./img/projects/' + project.url + '/screen.png'" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
+                            <img :src="'./img/projects/' + project.url + '/screen.png'" :title="project.name" :alt="project.name" class="d-block w-100 mt-3 mb-2 pt-1" />
                             <h2>{{ project.name }}</h2>
                             <div class="url">
                                 <a :href="'http://' + project.url">{{ project.url }}</a>
@@ -467,7 +467,7 @@
                 </div>
                 <div class="row justify-content-around mb-3">
                     <div v-for="(certificate, index) of certificates" :href="'./certificate/PDF/cert-' + certificate.license + '.pdf'" class="text certificate col-lg-5 col-md-5 col-sm-11 col-11 mb-5 p-3">
-                        <img :data-src="'./certificate/thumbs/cert-' + certificate.license + '.jpg'" class="lazyload img-fluid mb-3" :alt="'Certificate ' + certificate.name" />
+                        <img :data-src="'./certificate/thumbs/cert-' + certificate.license + '.jpg'" class="lazyload img-fluid mb-3" :title="'Certificate ' + certificate.name" :alt="'Certificate ' + certificate.name" />
                         <br>
                         <b>Name:</b> <strong class="m-2 pb-2">{{ certificate.name }}</strong>
                         <br>
@@ -625,7 +625,7 @@
                             <img style="border:0;width:88px;height:31px" data-src="https://jigsaw.w3.org/css-validator/images/vcss-blue" class="lazyload" alt="Правильний CSS!" />
                         </a>
                         <!-- MyCounter v.2.0 -->
-                        <script type="text/javascript">
+                        <script>
                             my_id = 169829;
                             my_width = 88;
                             my_height = 31;
