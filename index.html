@@ -341,7 +341,8 @@
                             <img data-src="./img/desctop/head.png" alt="head" class="lazyload head d-block w-100" />
                             <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
                                 <div class="imgProjectCarousel">
-                                    <img :data-src="'./img/projects/' + project.url + '-screen.png'" :alt="project.name" class="lazyload d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
+                                    <img :data-src="'./img/projects/' + project.url + '-screen.png'" :alt="project.name" class="lazyload d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" style="position: absolute; z-index: 11; top: -15px;" />
+                                    <img src="./img/projects/no-screenshot.png" alt="no-screenshot" style="position: relative;" class="d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
                                 </div>
                             </div>
                         </div>
