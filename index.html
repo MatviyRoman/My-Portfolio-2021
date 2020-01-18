@@ -341,7 +341,7 @@
                             <img data-src="./img/desctop/head.png" alt="head" class="lazyload head d-block w-100" />
                             <div :class="'carousel-item ' + project.active" v-for="(project, index) of projects">
                                 <div class="imgProjectCarousel">
-                                    <img :data-src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="lazyload d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
+                                    <img :data-src="'./img/projects/' + project.url + '-screen.png'" :alt="project.name" class="lazyload d-block w-100 mt-md-3 mt-sm-2 mt-2 pt-2" />
                                 </div>
                             </div>
                         </div>
@@ -366,7 +366,7 @@
                                 <i class="heading-title screenshot">
                                     Full screenshot
                                 </i>
-                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '/thumbs/full-screen.png'" :alt="project.name" class="lazyload full-screenshot img-fluid p-1">
+                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '-full-screen.png'" :alt="project.name" class="lazyload full-screenshot img-fluid p-1">
                             </div>
                             <div class="text description col-lg-6 col-md-5 col-sm-10 col-11 p-md-2 p-sm-3 p-3">
                                 <b>Project completion date:</b> <time pubdate :datetime="project.date">{{ project.date }}</time>
@@ -387,7 +387,7 @@
                                 <i class="heading-title screenshot">
                                     Small screenshot
                                 </i>
-                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '/thumbs/screen.png'" :alt="project.name" class="lazyload desctop small-screenshot img-fluid p-1" />
+                                <img style="width: 100%" :data-src="'./img/projects/' + project.url + '-screen.png'" :alt="project.name" class="lazyload desctop small-screenshot img-fluid p-1" />
                             </div>
                         </div>
                     </div>
@@ -648,16 +648,16 @@
         <!--  Footer End  -->
     </div>
     <!-- jQuery first, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" async defer></script>
     <!-- VueJS -->
-    <script src="js/vue.min.js" async defer></script>
+    <script src="js/vue.min.js" defer></script>
     <!-- WOW Animated -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" async defer></script>
     <!-- Main Java Script -->
-    <script src="js/main.min.js" async defer></script>
+    <script src="js/main.min.js" defer></script>
     <!-- Animated Headline -->
-    <script src="js/animhead.min.js" async defer></script>
+    <script src="js/animhead.min.js" defer></script>
     <!-- Lazysizes -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async defer></script>
     <!-- Google Map -->
