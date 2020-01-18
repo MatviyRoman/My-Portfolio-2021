@@ -156,7 +156,7 @@
                 <div class="abouts" v-for="(aboutMe, index) of abouts">
                     <div class="row">
                         <div class="image-container col-lg-5 col-md-12 col-12 mr-md-5 mr-0 mt-md-0 mt-4 wow bounceInRight align-self-center" v-on:click="modalOpen">
-                            <img src="img/me/blackMe.jpg" class="mt-3 mb-3 wow bounceInLeft d-block img-fluid Roman_Matviy" alt="Front-end developer Ukraine/Lviv Roman Matviy" />
+                            <img data-src="img/me/blackMe.jpg" class="lazyload mt-3 mb-3 wow bounceInLeft d-block img-fluid Roman_Matviy" alt="Front-end developer Ukraine/Lviv Roman Matviy" />
                         </div>
                         <div class="col-lg-6 col-md-12 col-12 p-5 align-self-center">
                             <div class="row align-content-center mb-5">
@@ -621,7 +621,7 @@
                         &nbsp;<a :href="'https://' + about.site" class="link">{{ about.fullname }}</a>
                         <p class="w-100 mb-3"></p>
                         <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
-                            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Правильний CSS!" />
+                            <img style="border:0;width:88px;height:31px" data-src="https://jigsaw.w3.org/css-validator/images/vcss-blue" class="lazyload" alt="Правильний CSS!" />
                         </a>
                         <!-- MyCounter v.2.0 -->
                         <script type="text/javascript">
