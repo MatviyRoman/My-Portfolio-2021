@@ -2,23 +2,23 @@ console.log(
     "Message: This site is under construction. Work is underway to correct errors and improve the functionality.",
 );
 /* Fakes the loading setting a timeout Begin */
-$(document).ready(function() {
-    setTimeout(function() {
+$(document).ready(function () {
+    setTimeout(function () {
         $("body").addClass("loaded");
     }, 2500);
 });
 /* Fakes the loading setting a timeout End */
 /* Rotate photo Begin */
-$(function() {
+$(function () {
     $(".about").hover(
-        function() {
-            setTimeout(function() {
+        function () {
+            setTimeout(function () {
                 $(".Roman_Matviy").addClass("hover");
                 $(".image-container").addClass("color");
             }, 3000);
         },
-        function() {
-            setTimeout(function() {
+        function () {
+            setTimeout(function () {
                 $(".Roman_Matviy").removeClass("hover");
                 $(".image-container").removeClass("color");
             }, 3000);
@@ -27,16 +27,16 @@ $(function() {
 });
 /* Rotate photo End */
 /* Year copyright Begin */
-$(function() {
+$(function () {
     thisyear = new Date().getFullYear();
     $(".copyrightYear").text(thisyear);
 });
 /* Year copyright End */
 /* Send Mail Begin */
-$(document).ready(function() {
-    $("form").submit(function(e) {
+$(document).ready(function () {
+    $("form").submit(function (e) {
         e.preventDefault();
-        var mailto_link =
+        let mailto_link =
             "mailto:" +
             "roman@matviy.pp.ua" +
             "?subject=" +
@@ -116,9 +116,9 @@ const frontEnds = [
     frontEnd("HTML5", "90"),
     frontEnd("CSS3", "85"),
     frontEnd("CSS Flexbox", "82"),
-    frontEnd("CSS Grid", "20"),
+    frontEnd("CSS Grid", "35"),
     frontEnd("SASS/ SCSS", "60"),
-    frontEnd("JavaScript", "40"),
+    frontEnd("JavaScript", "50"),
 ];
 /* Front-End End */
 /* Back-End Begin */
@@ -126,7 +126,7 @@ const backEnd = (name, num) => ({
     name,
     num,
 });
-const backEnds = [backEnd("PHP", "25"), backEnd("MySQL", "20")];
+const backEnds = [backEnd("PHP", "55"), backEnd("MySQL", "47")];
 /* Back-End End */
 /* Certificates Begin */
 const certificate = (firstDate, secondDate, name, license, link) => ({
@@ -138,43 +138,57 @@ const certificate = (firstDate, secondDate, name, license, link) => ({
 });
 const certificates = [
     certificate(
-        "8 Mar 2020",
-        "",
+        "8 March 2020",
+        "soon",
         "ScriptJedi42 - ProgrammingMentor / ScriptJedi42 - Ментор з Програмування",
         "2020-ecb3d4127b27",
         "http://cert.programmingmentor.com/2020-ecb3d4127b27.pdf",
     ),
     certificate(
-        "18 Feb 2019",
-        "",
+        "18 Februar 2019",
+        "soon",
         "Basics of Web UI development / Основи Web UI розробки",
         "36340060295e40e5b149e02866465b3d",
         "https://courses.prometheus.org.ua:18090/cert/36340060295e40e5b149e02866465b3d",
     ),
     certificate(
-        "09 Sep 2018",
-        "",
+        "30 March 2020",
+        "soon",
+        "PHP Tutorial course / Основи PHP розробки",
+        "1059-10299461",
+        "https://www.sololearn.com/Certificate/1059-10299461/pdf/",
+    ),
+    certificate(
+        "04 April 2020",
+        "soon",
+        "SQL Fundamentals course / Основи SQL розробки",
+        "1060-10299461",
+        "https://www.sololearn.com/Certificate/1060-10299461/pdf/",
+    ),
+    certificate(
+        "09 September 2018",
+        "soon",
         "HTML Fundamentals course / Основи HTML розробки",
         "1014-10299461",
         "https://www.sololearn.com/Certificate/1014-10299461/pdf/",
     ),
     certificate(
-        "08 Sep 2018",
-        "05 Jan 2020",
+        "08 September 2018",
+        "05 Januar 2020",
         "CSS Fundamentals course / Основи CSS розробки",
         "1023-10299461",
         "https://www.sololearn.com/Certificate/1023-10299461/pdf/",
     ),
     certificate(
-        "15 Oct 2018",
-        "06 Dec 2019",
+        "15 October 2018",
+        "06 December 2019",
         "JavaScript Tutorial course / Основи JavaScript розробки",
         "1024-10299461",
         "https://www.sololearn.com/Certificate/1024-10299461/pdf/",
     ),
     certificate(
-        "16 Oct 2018",
-        "",
+        "16 October 2018",
+        "soon",
         "jQuery Tutorial course / Основи jQuery розробки",
         "1082-10299461",
         "https://www.sololearn.com/Certificate/1082-10299461/pdf/",
@@ -200,8 +214,9 @@ const framework = (name, num) => ({
 const frameworks = [
     framework("Bootstrap", "75"),
     framework("jQuery", "40"),
-    framework("VueJS", "30"),
+    framework("VueJS", "35"),
     framework("Angular 2", "20"),
+    framework("React", "10"),
 ];
 /* Framework End */
 /* Language Begin */
@@ -211,8 +226,8 @@ const language = (name, num, level) => ({
     level,
 });
 const languages = [
-    language("English", "45", "Pre-intermediate"),
-    language("Polish", "30", "Beginner"),
+    language("English", "49", "Pre-intermediate"),
+    language("Polish", "35", "Beginner"),
     language("Ukrainian", "100", "Proficient"),
     language("Russian", "80", "Advanced"),
 ];
@@ -246,6 +261,7 @@ const link = (name, url) => ({
 });
 const links = [
     link("KeyTest", "https://keytest.pp.ua"),
+    link("Calculator", "https://calculator.matviy.pp.ua"),
     link("PSD Models", "http://psd.matviy.pp.ua"),
     link("Emmet-Cheat", "http://cheat.matviy.pp.ua"),
     link("Tools & Programms", "https://github.com/MatviyRoman/Tools-Programm"),
@@ -318,8 +334,8 @@ const tools = [
     tool("Chrome Browser", "80"),
     tool("Firefox Browser", "63"),
     tool("Command Line", "55"),
-    tool("Git", "70"),
-    tool("GitHub", "80"),
+    tool("Git / Github", "80"),
+    tool("PageSpeed Insights", "88"),
     tool("Gulp / Webpack / NPM", "70"),
 ];
 /* Tool End */
@@ -349,7 +365,7 @@ const project = (date, url, github, name, desc, skills, active) => ({
 });
 const projects = [
     project(
-        "21 Feb 2019",
+        "21 Februar 2019",
         "matviy.pp.ua",
         "https://github.com/MatviyRoman/Portfolio2019",
         "My Portfolio 2019",
@@ -358,7 +374,7 @@ const projects = [
         "active",
     ),
     project(
-        "15 Jan 2019",
+        "15 Januar 2019",
         "camel.matviy.pp.ua",
         "https://github.com/MatviyRoman/Camel",
         "Camel Heal",
@@ -367,7 +383,7 @@ const projects = [
         "",
     ),
     project(
-        "21 Dec 2018",
+        "21 December 2018",
         "home.matviy.pp.ua",
         "https://github.com/MatviyRoman/HOME",
         "Home",
@@ -376,7 +392,7 @@ const projects = [
         "",
     ),
     project(
-        "15 Dec 2018",
+        "15 December 2018",
         "magazino.ga",
         "http://magazino.ga",
         "magazino.ga",
@@ -385,7 +401,7 @@ const projects = [
         "",
     ),
     project(
-        "8 Dec 2018",
+        "8 December 2018",
         "pantomax.matviy.pp.ua",
         "https://github.com/MatviyRoman/Pantomax",
         "Pantomax",
@@ -394,7 +410,7 @@ const projects = [
         "",
     ),
     project(
-        "7 Dec 2018",
+        "7 December 2018",
         "todo-list.matviy.pp.ua",
         "https://github.com/MatviyRoman/todo-list",
         "todo-list",
@@ -403,7 +419,7 @@ const projects = [
         "",
     ),
     project(
-        "27 Nov 2018",
+        "27 November 2018",
         "travel.matviy.pp.ua",
         "https://github.com/MatviyRoman/Travel-Agency",
         "Travel Agency",
@@ -412,7 +428,7 @@ const projects = [
         "",
     ),
     project(
-        "26 Nov 2018",
+        "26 November 2018",
         "portfolio2018.matviy.pp.ua",
         "https://github.com/MatviyRoman/My-Portfolio-2018",
         "My Portfolio 2018",
@@ -421,7 +437,7 @@ const projects = [
         "",
     ),
     project(
-        "15 Nov 2018",
+        "15 November 2018",
         "roman.matviy.pp.ua",
         "https://github.com/MatviyRoman/Roman.Matviy.CV",
         "Roman.Matviy.CV",
@@ -430,7 +446,7 @@ const projects = [
         "",
     ),
     project(
-        "14 Nov 2018",
+        "14 November 2018",
         "learn.matviy.pp.ua",
         "https://github.com/MatviyRoman/Learn-Theory-of-JS",
         "Learn Theory of JS",
@@ -439,7 +455,7 @@ const projects = [
         "",
     ),
     project(
-        "10 Nov 2018",
+        "10 November 2018",
         "short-code-vue.matviy.pp.ua",
         "https://github.com/MatviyRoman/Short-code-vue",
         "Short code vue",
@@ -448,7 +464,7 @@ const projects = [
         "",
     ),
     project(
-        "10 Nov 2018",
+        "10 November 2018",
         "vue.matviy.pp.ua",
         "https://github.com/MatviyRoman/Test-vue.js",
         "Test vue.js",
@@ -457,7 +473,7 @@ const projects = [
         "",
     ),
     project(
-        "9 Nov 2018",
+        "9 November 2018",
         "resume.matviy.pp.ua",
         "https://github.com/MatviyRoman/Old-my-resume",
         "Old my resume",
@@ -466,7 +482,7 @@ const projects = [
         "",
     ),
     project(
-        "6 Nov 2018",
+        "6 November 2018",
         "startup.matviy.pp.ua",
         "https://github.com/MatviyRoman/Startup.matviy.pp.ua",
         "Startup",
@@ -475,7 +491,7 @@ const projects = [
         "",
     ),
     project(
-        "1 Nov 2018",
+        "1 November 2018",
         "github.com/MatviyRoman/AngularJS",
         "https://github.com/MatviyRoman/AngularJS/tree/master/angular2-intro",
         "AngularJS",
@@ -484,7 +500,7 @@ const projects = [
         "",
     ),
     project(
-        "26 Oct 2018",
+        "26 October 2018",
         "example.matviy.pp.ua",
         "https://github.com/MatviyRoman/example.matviy.pp.ua",
         "example",
@@ -493,7 +509,7 @@ const projects = [
         "",
     ),
     project(
-        "26 Oct 2018",
+        "26 October 2018",
         "gentab.matviy.pp.ua",
         "https://github.com/MatviyRoman/HTML-Tables-Generation",
         "HTML Tables Generation",
@@ -502,7 +518,7 @@ const projects = [
         "",
     ),
     project(
-        "25 Oct 2018",
+        "25 October 2018",
         "test.matviy.pp.ua",
         "https://github.com/MatviyRoman/test.matviy.pp.ua",
         "test.matviy.pp.ua",
@@ -511,7 +527,7 @@ const projects = [
         "",
     ),
     project(
-        "10 Oct 2018",
+        "10 October 2018",
         "creatives.matviy.pp.ua",
         "https://github.com/MatviyRoman/Creatives-Project",
         "Creatives",
@@ -520,7 +536,7 @@ const projects = [
         "",
     ),
     project(
-        "25 Jan 2019",
+        "25 Januar 2019",
         "arnika.matviy.pp.ua",
         "https://github.com/MatviyRoman/www.arnika.od.ua",
         "МЦ Арника arnika.od.ua",
@@ -529,7 +545,7 @@ const projects = [
         "",
     ),
     project(
-        "7 Oct 2018",
+        "7 October 2018",
         "modal.matviy.pp.ua",
         "https://github.com/MatviyRoman/My-Modal-Window",
         "Window modal test",
@@ -538,7 +554,7 @@ const projects = [
         "",
     ),
     project(
-        "24 Sep 2018",
+        "24 September 2018",
         "bisines.matviy.pp.ua",
         "https://github.com/MatviyRoman/Bisines-Company-Project",
         "Bisines-Company",
@@ -598,13 +614,13 @@ new Vue({
         select: 1,
     },
     methods: {
-        modalOpen: function() {
+        modalOpen: function () {
             this.isActive = true;
         },
-        modalClose: function() {
+        modalClose: function () {
             this.isActive = false;
         },
-        selectProject: function(index) {
+        selectProject: function (index) {
             // console.log('Click', index)
             this.project = projects[index];
             this.selectedProjectIndex = index;
@@ -617,7 +633,7 @@ new Vue({
         // },
     },
     computed: {
-        message: function() {
+        message: function () {
             return "Hello " + about.fullname;
         },
         phoneBtnText() {
@@ -639,7 +655,7 @@ new Vue({
     },
 });
 /* Core End */
-$(document).ready(function() {
+$(document).ready(function () {
     var mc = {
         "0-19": "bg-danger red",
         "20-39": "bg-warning orange",
@@ -652,11 +668,11 @@ $(document).ready(function() {
         return x >= min && x <= max;
     }
     var bc, dc, first, second, th;
-    $(".progress-bar, .c100, .circular-chart, .circle").each(function(index) {
+    $(".progress-bar, .c100, .circular-chart, .circle").each(function (index) {
         th = $(this);
         dc = parseInt($(this).attr("data-color"), 10);
         bc = parseInt($(this).attr("circle-color"), 10);
-        $.each(mc, function(name, value) {
+        $.each(mc, function (name, value) {
             first = parseInt(name.split("-")[0], 10);
             second = parseInt(name.split("-")[1], 10);
             // console.log(between(dc, first, second));
@@ -676,10 +692,10 @@ $(document).ready(function() {
         });
     });
 });
-$("li.active").on("click", function() {
+$("li.active").on("click", function () {
     $("li.active").click();
 });
-$(".carousel-control-prev").click(function() {
+$(".carousel-control-prev").click(function () {
     $("li.active").trigger();
 });
 
